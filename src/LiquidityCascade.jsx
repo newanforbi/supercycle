@@ -3326,7 +3326,7 @@ export default function LiquidityCascade() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          The Liquidity Cascade
+          Supercycle
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", margin: "0 0 24px", maxWidth: 620, lineHeight: 1.55 }}>
           A chronological matrix for capital rotation across Bittensor, XRP, and Zcash — anchored to the Bitcoin halving as the definitive temporal fulcrum.
