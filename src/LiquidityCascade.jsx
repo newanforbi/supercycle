@@ -2823,6 +2823,52 @@ function Blackpaper() {
         </BlackpaperQuote>
       </BlackpaperSection>
 
+      <BlackpaperSection label="PHASE 4" color={y}>
+        <BlackpaperHeading>The Discipline Trade</BlackpaperHeading>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 22, color: y, fontWeight: 700, marginBottom: 20, letterSpacing: -0.5 }}>
+          Zcash (ZEC) Wave 2: The Retracement Buy
+        </div>
+        <BlackpaperPara>
+          November 12, 2025. ZEC at $674. The portfolio has just crossed $660 million.
+        </BlackpaperPara>
+        <BlackpaperPara indent>
+          This is the moment that separates the disciplined from the delusional. Phase 3 has peaked. The doomsday premium has evaporated.
+          Regulatory headlines have shifted. The narrative is fully exhausted. Every textbook signal says: <em style={{ color: "rgba(255,255,255,0.8)" }}>exit everything</em>.
+        </BlackpaperPara>
+        <BlackpaperQuote color={y}>
+          And yet there is capital reserved. Not all $660M goes to fiat. A portion — strategically held back during the W1 explosion —
+          sits in stablecoins, waiting for the inevitable retracement.
+        </BlackpaperQuote>
+        <BlackpaperPara indent>
+          The capitulation arrives predictably. By March 2026, ZEC has crashed from $674 to <BlackpaperDatum value="$197.82" color={y} />.
+          A 71% drawdown. Most holders capitulate here. "I was right the first time, but I'm an idiot for holding." They liquidate at the bottom.
+        </BlackpaperPara>
+        <BlackpaperPara indent>
+          But the framework does not end at the peak. It survives the retracement by design.
+        </BlackpaperPara>
+        <BlackpaperPara indent>
+          <strong>March 7, 2026: Re-entry at $197.82</strong> • Reserved capital redeploys into ZEC at the capitulation price •
+          This is not "panic buying." This is <em style={{ color: "rgba(255,255,255,0.8)" }}>disciplined re-entry based on preserved dry powder</em>
+        </BlackpaperPara>
+        <BlackpaperPara indent>
+          Why does ZEC re-expand? Because the underlying regulatory pressures have not resolved. The doomsday narrative is still intact.
+          The institutions that fled on the W1 peak have partially returned, seeking a "second chance entry." Retail, having capitulated,
+          is absent. The order books are thin. The conditions for a secondary explosive move are set.
+        </BlackpaperPara>
+        <BlackpaperPara indent>
+          <strong>May 19, 2026: Final Exit at $673.46</strong> • ZEC returns to precisely its W1 peak •
+          <strong>Wave 2 Multiple: 3.4x</strong> • <strong>Wave 2 Gain: $124.4M on a $31.1M entry</strong>
+        </BlackpaperPara>
+        <BlackpaperQuote color={y}>
+          This is the discipline trade. Not the explosive 21.6x of W1, but a 3.4x that proves the framework is repeatable,
+          not luck. Smaller multiple, same psychological requirement: exit when it peaks, not when you think it will go higher.
+        </BlackpaperQuote>
+        <BlackpaperPara indent>
+          The final portfolio value: <strong>$660,800,000</strong>. This is not $232M from W1 alone. This is W1 ($124M) plus W2 ($124M)
+          plus the compounded capital from Phases 1 and 2. The framework proves itself across the full cycle.
+        </BlackpaperPara>
+      </BlackpaperSection>
+
       <BlackpaperSection label="VII" color="rgba(255,255,255,0.4)">
         <BlackpaperHeading>The Rotational Matrix</BlackpaperHeading>
         <BlackpaperPara>
@@ -2832,11 +2878,12 @@ function Blackpaper() {
         </BlackpaperPara>
         <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, overflow: "hidden", margin: "24px 0" }}>
           {[
-            { phase: "1", asset: "TAO", entry: "Month −16", exit: "Month −1", mult: "19.66x", capital: "$1.97M", color: g },
-            { phase: "2", asset: "XRP", entry: "Month +2", exit: "Month +7", mult: "3.51x", capital: "$6.90M", color: o },
-            { phase: "3", asset: "ZEC", entry: "Month +9", exit: "Month +19", mult: "33.7x", capital: "$232.5M", color: y },
+            { phase: "1", asset: "TAO", entry: "Oct 2023", exit: "Mar 2024", mult: "12.85x", capital: "$1.285M", color: g },
+            { phase: "2", asset: "XRP", entry: "Oct 2024", exit: "Jan 2025", mult: "5.94x", capital: "$7.631M", color: o },
+            { phase: "3", asset: "ZEC W1", entry: "Apr 2025", exit: "Nov 2025", mult: "33.67x", capital: "$232.5M", color: y },
+            { phase: "4", asset: "ZEC W2", entry: "Mar 2026", exit: "May 2026", mult: "3.4x", capital: "$660.8M", color: y },
           ].map((row, i) => (
-            <div key={i} style={{ display: "grid", gridTemplateColumns: "50px 60px 90px 90px 70px 90px", padding: "12px 16px", borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.04)" : "none", alignItems: "center" }}>
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "50px 70px 90px 90px 70px 90px", padding: "12px 16px", borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.04)" : "none", alignItems: "center" }}>
               <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "rgba(255,255,255,0.3)" }}>P{row.phase}</span>
               <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: row.color, fontWeight: 600 }}>{row.asset}</span>
               <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: "rgba(255,255,255,0.4)" }}>{row.entry}</span>
@@ -2847,10 +2894,10 @@ function Blackpaper() {
           ))}
         </div>
         <BlackpaperPara indent>
-          Projected onto the 2028 halving — anticipated for April of that year — the matrix yields four dates:
-          TAO accumulation between October 2023 and March 2024, TAO exit and XRP entry in October 2024, XRP exit and ZEC accumulation in April 2025,
-          and the terminal ZEC liquidation to fiat in November 2029. The assets occupying each archetype may shift.
-          The temporal structure, if history holds, will not.
+          The four-phase structure spans 19 months: TAO vanguard (Oct 2023–Mar 2024), XRP institutional (Oct 2024–Jan 2025),
+          ZEC W1 overflow (Apr–Nov 2025), ZEC W2 discipline trade (Mar–May 2026). The final phase proves the framework is repeatable —
+          not a one-shot explosion, but a sustainable pattern of disciplined capital rotation through multiple inflection points.
+          The assets occupying each archetype may shift with future cycles. The temporal structure, and the psychological discipline required, will not.
         </BlackpaperPara>
       </BlackpaperSection>
 
