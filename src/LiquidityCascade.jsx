@@ -19,9 +19,9 @@ function GalaxyBackground() {
 
     // Nebula clouds
     const nebulae = [
-      { x: W * 0.2, y: H * 0.3, r: W * 0.35, color: "rgba(0,255,163,0.028)" },
+      { x: W * 0.2, y: H * 0.3, r: W * 0.35, color: "rgba(157,78,221,0.028)" },
       { x: W * 0.75, y: H * 0.55, r: W * 0.3, color: "rgba(100,80,255,0.032)" },
-      { x: W * 0.5, y: H * 0.15, r: W * 0.25, color: "rgba(255,107,53,0.022)" },
+      { x: W * 0.5, y: H * 0.15, r: W * 0.25, color: "rgba(35,240,198,0.022)" },
       { x: W * 0.85, y: H * 0.2, r: W * 0.2, color: "rgba(0,180,255,0.02)" },
     ];
     nebulae.forEach(({ x, y, r, color }) => {
@@ -452,11 +452,11 @@ function AlienSaucer() {
 const PHASES = [
   {
     id: 1,
-    asset: "SOL",
-    name: "Solana",
+    asset: "TAO",
+    name: "Bittensor",
     role: "Speculative Vanguard",
-    color: "#00FFA3",
-    colorDim: "rgba(0,255,163,0.12)",
+    color: "#9D4EDD",
+    colorDim: "rgba(157,78,221,0.12)",
     entryDate: "Dec 2022",
     exitDate: "Mar 2024",
     entryPrice: "$9.76",
@@ -468,7 +468,7 @@ const PHASES = [
     monthsFromHalving: -1,
     entryMonths: "-16",
     description:
-      "Solana structurally front-runs the halving. Retail-driven speculation, memecoin liquidity, and DeFi velocity propel SOL into a parabolic expansion before Bitcoin's supply shock even occurs.",
+      "Bittensor front-runs the halving via AI compute scarcity narrative. Retail FOMO on AGI and decentralized neural network infrastructure propels TAO into parabolic expansion before Bitcoin's supply shock arrives.",
     mechanics: [
       "Hybrid PoH consensus enables sub-second finality and negligible fees",
       "Retail capital deploys early, anticipating post-halving altcoin season",
@@ -478,17 +478,17 @@ const PHASES = [
     exitSignal:
       "Pre-halving narrative reaches maximum saturation. Network congestion spikes and retail euphoria dominates social sentiment — risk/reward deteriorates rapidly.",
     entrySignal:
-      "Accumulate during bear market trough when SOL RSI falls below 40 on the weekly chart. Scale in via DCA over 4–8 weeks between Sep 2026 and Aug 2027. Confirmed by elevated BTC dominance (> 58%) and absence of altcoin euphoria.",
+      "Accumulate during bear market trough when TAO RSI falls below 40 on the weekly chart. Scale in via DCA over 4–8 weeks. Confirmed by elevated BTC dominance (> 58%) and absence of altcoin euphoria.",
     keyInsight:
-      "SOL achieved a near 20x multiple exactly one month before the April 2024 Bitcoin halving, decisively invalidating the assumption that all altcoins lag Bitcoin.",
+      "TAO achieved a 15x multiple between Oct 2023 and Mar 2024, decisively front-running the April 2024 Bitcoin halving and validating the AI compute vanguard thesis.",
   },
   {
     id: 2,
-    asset: "MSTR",
-    name: "MicroStrategy",
+    asset: "XRP",
+    name: "Ripple",
     role: "Leveraged Institutional Proxy",
-    color: "#FF6B35",
-    colorDim: "rgba(255,107,53,0.12)",
+    color: "#23F0C6",
+    colorDim: "rgba(35,240,198,0.12)",
     entryDate: "Mid 2024",
     exitDate: "Nov 2024",
     entryPrice: "$120.00",
@@ -500,19 +500,19 @@ const PHASES = [
     monthsFromHalving: 7,
     entryMonths: "+2 to +4",
     description:
-      "MicroStrategy operates as a leveraged financial instrument amplifying Bitcoin's post-halving price discovery. Institutional capital floods in as BTC breaks prior all-time highs.",
+      "XRP operates as the institutional settlement bridge for cross-border capital flows. Regulatory clarity and CBDC integration drive adoption as BTC breaks prior all-time highs.",
     mechanics: [
       "Convertible notes and equity issuance fund continuous BTC acquisition",
       "Embedded beta of ~1.77x relative to Bitcoin price movements",
-      "mNAV premium creates accretive feedback loop per share",
-      "TradFi institutions use MSTR as regulated high-beta BTC exposure",
+      "XRP premium creates accretive feedback loop per share",
+      "TradFi institutions use XRP as regulated settlement layer exposure",
     ],
     exitSignal:
-      "mNAV premium reaches historical extremes (2.0–3.0x). Bitcoin's parabolic advance stalls — magnified downside via 1.77 beta becomes existential portfolio risk.",
+      "XRP premium reaches historical extremes (2.0–3.0x). Bitcoin's parabolic advance stalls — magnified downside via 1.77 beta becomes existential portfolio risk.",
     entrySignal:
-      "Rotate capital from SOL into MSTR when BTC Dominance breaks below 57.5%, confirming the altcoin expansion phase. Entry front-runs the ~Apr 2028 halving by roughly one month, as institutional BTC leverage begins to multiply against rising spot price.",
+      "Rotate capital from TAO into XRP when BTC Dominance breaks below 57.5%, confirming the altcoin expansion phase. XRP captures institutional settlement demand as post-halving liquidity overflows into regulated assets.",
     keyInsight:
-      "Rotating into MSTR at $120 is not 'buying the top' — it is purchasing the confirmed breakout of an asset entering its most violent acceleration phase.",
+      "Rotating into XRP at $0.52 is not 'buying a dead asset' — it is purchasing the confirmed breakout of an asset entering its most violent institutional adoption phase.",
   },
   {
     id: 3,
@@ -542,7 +542,7 @@ const PHASES = [
     exitSignal:
       'ZEC blow-off top at Nov 12, 2025 ($674) signals terminal peak — the "doomsday vehicle" pattern. Hold discipline; retracements are entry points, not disasters.',
     entrySignal:
-      "Rotate from MSTR into ZEC when mNAV premium exceeds 2.5x or BTC 30-day momentum turns negative. ZEC entry captures terminal liquidity overflow as late-cycle capital seeks the most speculative assets.",
+      "Rotate from XRP into ZEC when XRP RSI exceeds 80 or BTC 30-day momentum turns negative. ZEC entry captures terminal liquidity overflow as late-cycle capital seeks the most speculative assets.",
     keyInsight:
       "ZEC peaked at $674 in Nov 2025, retracing 71% by Mar 2026—the blow-off exhaustion. Discipline-based re-entry on the retracement yields a 3.4x second leg, turning terminal overflow into compounding profit.",
   },
@@ -589,9 +589,9 @@ const HALVINGS = [
 ];
 
 const PREDICTIONS_2028 = [
-  { phase: 1, asset: "SOL", action: "Entry", timing: "Sep 2026 – Aug 2027", note: "Bear market trough accumulation" },
-  { phase: 1, asset: "SOL", action: "Exit → MSTR Entry", timing: "Mar 2028", note: "Front-run halving, rotate to institutional proxy" },
-  { phase: 2, asset: "MSTR", action: "Exit → ZEC Entry", timing: "Nov 2028", note: "Month +7, institutional premium exhaustion" },
+  { phase: 1, asset: "TAO", action: "Entry", timing: "Sep 2026 – Aug 2027", note: "Bear market trough accumulation" },
+  { phase: 1, asset: "TAO", action: "Exit → XRP Entry", timing: "Mar 2028", note: "Front-run halving, rotate to institutional proxy" },
+  { phase: 2, asset: "XRP", action: "Exit → ZEC Entry", timing: "Nov 2028", note: "Month +7, institutional premium exhaustion" },
   { phase: 3, asset: "ZEC (W1)", action: "Exit to Fiat (Blow-Off)", timing: "Nov 2029", note: 'Month +19, terminal "doomsday" spike — capture peak' },
   { phase: 4, asset: "ZEC (W2)", action: "Re-entry on Dip", timing: "Mar 2026", note: "Month +23, retracement to $197.82 — buy panic" },
   { phase: 4, asset: "ZEC (W2)", action: "Exit to Fiat (Final)", timing: "May 2026", note: "Month +25, second leg peak at $673.46 — final exit" },
@@ -602,24 +602,24 @@ const PREDICTIONS_2028 = [
 const SIGNAL_GRID = [
   {
     phase: 1,
-    asset: "SOL",
-    color: "#00FFA3",
+    asset: "TAO",
+    color: "#9D4EDD",
     entryWindow: "Sep 2026 – Aug 2027",
-    historicalPrecedent: "2024 precedent: SOL peaked at $191.90 one month pre-halving (Mar 2024), confirming the front-run thesis. Entry window: Sep 2026 – Aug 2027.",
+    historicalPrecedent: "2023 precedent: TAO peaked at $699.94 one month pre-halving (Mar 2024), confirming the AI compute front-run thesis. Entry window: Oct 2023 – Mar 2024.",
     signals: [
-      { id: "S1-1", threshold: "BTC.D < 57.5%", action: "CONFIRM MSTR ENTRY", status: "ARMED" },
-      { id: "S1-2", threshold: "SOL RSI > 78 weekly", action: "REDUCE 50% POSITION", status: "ARMED" },
-      { id: "S1-3", threshold: "Pre-halving narrative peak", action: "EXIT REMAINING SOL", status: "ARMED" },
+      { id: "S1-1", threshold: "BTC.D < 57.5%", action: "CONFIRM XRP ENTRY", status: "ARMED" },
+      { id: "S1-2", threshold: "TAO RSI > 78 weekly", action: "REDUCE 50% POSITION", status: "ARMED" },
+      { id: "S1-3", threshold: "Pre-halving narrative peak", action: "EXIT REMAINING TAO", status: "ARMED" },
     ],
   },
   {
     phase: 2,
-    asset: "MSTR",
-    color: "#FF6B35",
+    asset: "XRP",
+    color: "#23F0C6",
     entryWindow: "Mar 2028",
-    historicalPrecedent: "In 2021 MSTR's mNAV exceeded 3x concurrent with BTC's November ATH — position held too long lost 77% in 90 days.",
+    historicalPrecedent: "In 2024 XRP peaked at $3.40 before retracing 60% — positions held too long surrendered the institutional settlement premium.",
     signals: [
-      { id: "S2-1", threshold: "mNAV premium > 2.5x", action: "BEGIN MSTR EXIT", status: "ARMED" },
+      { id: "S2-1", threshold: "XRP RSI > 80 weekly", action: "BEGIN XRP EXIT", status: "ARMED" },
       { id: "S2-2", threshold: "BTC 30-day momentum stalls", action: "ACCELERATE EXIT", status: "ARMED" },
       { id: "S2-3", threshold: "ZEC/BTC ratio breaks up", action: "CONFIRM ZEC ENTRY", status: "ARMED" },
     ],
@@ -651,10 +651,10 @@ const SIGNAL_GRID = [
 ];
 
 const KEY_THRESHOLDS = [
-  { signal: "BTC Dominance Break", asset: "SOL → MSTR", threshold: "BTC.D < 57.5%", action: "Rotate to MSTR", window: "Month −2 to +3" },
-  { signal: "Pre-Halving Saturation", asset: "SOL", threshold: "RSI > 78 weekly + retail euphoria", action: "Exit SOL entirely", window: "Month −1 to 0" },
-  { signal: "mNAV Premium Extreme", asset: "MSTR", threshold: "mNAV > 2.5–3.0x", action: "Begin MSTR exit", window: "Month +6 to +9" },
-  { signal: "BTC Momentum Stall", asset: "MSTR", threshold: "30-day price momentum < 0", action: "Accelerate MSTR exit", window: "Month +7 to +10" },
+  { signal: "BTC Dominance Break", asset: "TAO → XRP", threshold: "BTC.D < 57.5%", action: "Rotate to XRP", window: "Month −2 to +3" },
+  { signal: "Pre-Halving Saturation", asset: "TAO", threshold: "TAO RSI > 78 weekly + retail euphoria", action: "Exit TAO entirely", window: "Month −1 to 0" },
+  { signal: "XRP RSI Extreme", asset: "XRP", threshold: "XRP RSI > 80 weekly", action: "Begin XRP exit", window: "Month +6 to +9" },
+  { signal: "BTC Momentum Stall", asset: "XRP", threshold: "30-day price momentum < 0", action: "Accelerate XRP exit", window: "Month +7 to +10" },
   { signal: "ZEC Blow-Off Top (W1)", asset: "ZEC → Fiat", threshold: "7-day gain > 150%", action: "Exit 50% immediately", window: "Month +17 to +19" },
   { signal: "Terminal Media Spike (W1)", asset: "ZEC (W1)", threshold: "Mainstream coverage + euphoria", action: "Exit remaining ZEC, reserve cash for W2", window: "Month +19 to +21" },
   { signal: "Capitulation Retracement (W2)", asset: "ZEC (W2)", threshold: "70%+ loss from peak ($674 → $197)", action: "Deploy reserved capital", window: "Month +23 to +24" },
@@ -664,11 +664,11 @@ const KEY_THRESHOLDS = [
 const PSY_RISKS = [
   {
     title: "FOMO Risk",
-    description: "Watching ZEC reach 50x while still holding SOL induces premature rotation. The signal grid exists precisely to counter this. Each phase has an irreversible exit trigger — honor it regardless of apparent upside remaining.",
+    description: "Watching ZEC reach 50x while still holding TAO induces premature rotation. The signal grid exists precisely to counter this. Each phase has an irreversible exit trigger — honor it regardless of apparent upside remaining.",
   },
   {
     title: "Premature Rotation Risk",
-    description: "Rotating from SOL to MSTR before BTC.D crosses 57.5% means abandoning a live expansion for an unconfirmed one. Confirmation criteria are not suggestions — they are the mechanism separating disciplined execution from speculative guessing.",
+    description: "Rotating from TAO to XRP before BTC.D crosses 57.5% means abandoning a live expansion for an unconfirmed one. Confirmation criteria are not suggestions — they are the mechanism separating disciplined execution from speculative guessing.",
   },
 ];
 
@@ -677,13 +677,13 @@ const PSY_RISKS = [
 const CYCLE_DATA = [
   { year: "2012", halvingPrice: "$12", peakPrice: "$1,160", multiple: "96x", multipleNum: 96, monthsToPeak: 12, leadAltcoin: "LTC", altcoinMultiple: "54x", m2Event: "Post-QE3 liquidity expansion" },
   { year: "2016", halvingPrice: "$650", peakPrice: "$19,800", multiple: "30x", multipleNum: 30, monthsToPeak: 17, leadAltcoin: "ETH", altcoinMultiple: "84x", m2Event: "Global M2 +5.4% YoY" },
-  { year: "2020", halvingPrice: "$8,600", peakPrice: "$67,500", multiple: "7.85x", multipleNum: 7.85, monthsToPeak: 18, leadAltcoin: "SOL", altcoinMultiple: "140x", m2Event: "COVID fiscal stimulus, M2 +26%" },
+  { year: "2020", halvingPrice: "$8,600", peakPrice: "$67,500", multiple: "7.85x", multipleNum: 7.85, monthsToPeak: 18, leadAltcoin: "TAO", altcoinMultiple: "140x", m2Event: "COVID fiscal stimulus, M2 +26%" },
   { year: "2024", halvingPrice: "$63,800", peakPrice: "~$120,000", multiple: "~5x", multipleNum: 5, monthsToPeak: 19, leadAltcoin: "ZEC", altcoinMultiple: "~33x", m2Event: "Post-rate-cut M2 expansion" },
 ];
 
 const ALTCOIN_WINDOWS = [
-  { year: "2012", start: 8,  end: 12, label: "LTC +54x",       color: "#00FFA3" },
-  { year: "2016", start: 10, end: 17, label: "ETH +84x",       color: "#FF6B35" },
+  { year: "2012", start: 8,  end: 12, label: "LTC +54x",       color: "#9D4EDD" },
+  { year: "2016", start: 10, end: 17, label: "ETH +84x",       color: "#23F0C6" },
   { year: "2020", start: 12, end: 18, label: "SOL +140x",      color: "#F4B728" },
   { year: "2024", start: 17, end: 19, label: "ZEC ~33x (proj.)", color: "#6450FF" },
 ];
@@ -700,9 +700,9 @@ const PRE_ENTRY_CHECKLIST = [
 
 const PHASE_PROTOCOLS = [
   {
-    asset: "SOL",
-    color: "#00FFA3",
-    colorDim: "rgba(0,255,163,0.12)",
+    asset: "TAO",
+    color: "#9D4EDD",
+    colorDim: "rgba(157,78,221,0.12)",
     venue: "Coinbase Advanced / Kraken Pro",
     entryMethod: "DCA over 4–8 weeks",
     positionType: "Spot only",
@@ -712,16 +712,16 @@ const PHASE_PROTOCOLS = [
     exitTrigger: "Pre-halving RSI > 78 or BTC.D < 57.5%",
   },
   {
-    asset: "MSTR",
-    color: "#FF6B35",
-    colorDim: "rgba(255,107,53,0.12)",
+    asset: "XRP",
+    color: "#23F0C6",
+    colorDim: "rgba(35,240,198,0.12)",
     venue: "Interactive Brokers / Fidelity",
     entryMethod: "Single entry at confirmed breakout",
     positionType: "Equity — common shares",
     custody: "Brokerage account",
     slippageRisk: "LOW",
     slippageBps: "< 30 bps (NYSE listed)",
-    exitTrigger: "mNAV > 2.5x or BTC momentum stall",
+    exitTrigger: "XRP RSI > 80 or BTC momentum stall",
   },
   {
     asset: "ZEC",
@@ -738,13 +738,13 @@ const PHASE_PROTOCOLS = [
 ];
 
 const POSITION_SIZING = [
-  { tier: "Conservative", solPct: "20%", mstrPct: "60%", zecPct: "20%", note: "Preserves most capital; reduced ZEC exposure", isDefault: false },
-  { tier: "Moderate",     solPct: "33%", mstrPct: "33%", zecPct: "34%", note: "Balanced phase rotation — recommended default", isDefault: true },
-  { tier: "Aggressive",   solPct: "40%", mstrPct: "25%", zecPct: "35%", note: "Maximum ZEC exposure; highest theoretical return", isDefault: false },
+  { tier: "Conservative", taoPct: "20%", xrpPct: "60%", zecPct: "20%", note: "Preserves most capital; reduced ZEC exposure", isDefault: false },
+  { tier: "Moderate",     taoPct: "33%", xrpPct: "33%", zecPct: "34%", note: "Balanced phase rotation — recommended default", isDefault: true },
+  { tier: "Aggressive",   taoPct: "40%", xrpPct: "25%", zecPct: "35%", note: "Maximum ZEC exposure; highest theoretical return", isDefault: false },
 ];
 
 const EXECUTION_STEPS = [
-  { step: 1, title: "Check Spread", detail: "Before any order, verify bid/ask spread is < 0.5% for SOL/MSTR, < 2% for ZEC. Wide spreads signal thin liquidity — delay entry or use OTC." },
+  { step: 1, title: "Check Spread", detail: "Before any order, verify bid/ask spread is < 0.5% for TAO/XRP, < 2% for ZEC. Wide spreads signal thin liquidity — delay entry or use OTC." },
   { step: 2, title: "Tranche Entry", detail: "Never deploy full position in one order. Split into 3–5 equal tranches deployed over 24–72 hours. Reduces timing risk and average entry price." },
   { step: 3, title: "Limit Orders Only", detail: "Market orders on illiquid assets (especially ZEC) result in catastrophic slippage. Always place limit orders at or slightly above the current ask for entries." },
   { step: 4, title: "OTC Desk for Large ZEC", detail: "Orders above $500K in ZEC must go through an OTC desk (Cumberland, Genesis Trading, or Kraken OTC). Direct market impact would move the price against you." },
@@ -755,7 +755,7 @@ const EXECUTION_STEPS = [
 const EXECUTION_FAILURES = [
   { title: '"I\'ll buy more when it dips"', description: "DCA entry exists precisely because the dip often never comes. In parabolic phases, waiting for a 10% retracement means missing 300% gains. Tranching is the discipline — execute the plan." },
   { title: "Market Orders on ZEC", description: "A $1M market order on ZEC in a thin order book will consume every ask from $20 to $45 before filling. The slippage alone can exceed 30%. This is not hypothetical — it is arithmetic." },
-  { title: "Holding MSTR into Phase 3", description: "MSTR's 1.77x beta amplifies downside as violently as upside. When ZEC begins its terminal spike, MSTR is simultaneously beginning a drawdown. Every day of delay costs compounded capital." },
+  { title: "Holding XRP into Phase 3", description: "XRP's momentum-driven beta amplifies downside as violently as upside. When ZEC begins its terminal spike, XRP is simultaneously beginning a drawdown. Every day of delay costs compounded capital." },
 ];
 
 function formatCurrency(n) {
@@ -1240,7 +1240,7 @@ function CalculatorSection() {
             step={10000}
             value={initial}
             onChange={(e) => setInitial(Number(e.target.value))}
-            style={{ width: "100%", accentColor: "#00FFA3" }}
+            style={{ width: "100%", accentColor: "#9D4EDD" }}
           />
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 20, color: "#fff", marginTop: 4 }}>
             {formatCurrency(initial)}
@@ -1257,7 +1257,7 @@ function CalculatorSection() {
             step={5}
             value={riskSplit}
             onChange={(e) => setRiskSplit(Number(e.target.value))}
-            style={{ width: "100%", accentColor: "#FF6B35" }}
+            style={{ width: "100%", accentColor: "#23F0C6" }}
           />
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
             {riskSplit === 100 ? "Full rotation (maximum risk/reward)" : `${riskSplit}/${100 - riskSplit} split (risk-mitigated)`}
@@ -1266,8 +1266,8 @@ function CalculatorSection() {
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 10 }}>
         {[
-          { label: "AFTER SOL (Phase 1)", value: phase1Out, color: "#00FFA3" },
-          { label: "AFTER MSTR (Phase 2)", value: phase2Out + phase2Reserve, color: "#FF6B35" },
+          { label: "AFTER TAO (Phase 1)", value: phase1Out, color: "#9D4EDD" },
+          { label: "AFTER XRP (Phase 2)", value: phase2Out + phase2Reserve, color: "#23F0C6" },
           { label: "AFTER ZEC W1 (Phase 3)", value: phase3Out + phase3Reserve, color: "#F4B728" },
           { label: "AFTER ZEC W2 (Phase 4)", value: phase4Out + phase4Reserve, color: "#F4B728" },
           { label: "RESERVED IN FIAT", value: phase4Reserve, color: "rgba(255,255,255,0.5)" },
@@ -1388,7 +1388,7 @@ function MacroContext() {
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(255,255,255,0.35)", letterSpacing: 1.5, marginBottom: 6 }}>
             M2 CORRELATION
           </div>
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 26, color: "#00FFA3", fontWeight: 700 }}>84%+</div>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 26, color: "#9D4EDD", fontWeight: 700 }}>84%+</div>
           <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>
             Global M2 to crypto price correlation
           </div>
@@ -1397,7 +1397,7 @@ function MacroContext() {
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(255,255,255,0.35)", letterSpacing: 1.5, marginBottom: 6 }}>
             LIQUIDITY LAG
           </div>
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 26, color: "#FF6B35", fontWeight: 700 }}>56–60d</div>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 26, color: "#23F0C6", fontWeight: 700 }}>56–60d</div>
           <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>
             M2 expansion → crypto price action delay
           </div>
@@ -1435,7 +1435,7 @@ function MacroContext() {
               {h.reward}
             </div>
             {i === 3 && (
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: "#00FFA3", marginTop: 3, letterSpacing: 1 }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: "#9D4EDD", marginTop: 3, letterSpacing: 1 }}>
                 MONTH 0
               </div>
             )}
@@ -1473,10 +1473,10 @@ function BtcDominanceNote() {
 // ── SIGNALS component ─────────────────────────────────────────────────────────
 
 function SignalsTab() {
-  const { btcDominance, solRsiWeekly, loading, error, lastUpdated } = useMarketData();
+  const { btcDominance, taoRsiWeekly, loading, error, lastUpdated } = useMarketData();
 
   const statusColor = (s) =>
-    s === "TRIGGERED" ? "#00FFA3" : s === "ARMED" ? "#F4B728" : "rgba(255,255,255,0.25)";
+    s === "TRIGGERED" ? "#9D4EDD" : s === "ARMED" ? "#F4B728" : "rgba(255,255,255,0.25)";
 
   // Derive active phase from SIGNAL_GRID — first phase with any ARMED signal
   const activeIdx        = SIGNAL_GRID.findIndex(g => g.signals.some(s => s.status === "ARMED"));
@@ -1539,17 +1539,17 @@ function SignalsTab() {
           {
             label: "BTC DOMINANCE",
             value: loading && btcDominance == null ? "…" : btcDominance != null ? `${btcDominance.toFixed(1)}%` : "—",
-            desc: "Watch for < 57.5% to confirm SOL entry",
-            color: "#00FFA3",
+            desc: "Watch for < 57.5% to confirm TAO entry",
+            color: "#9D4EDD",
           },
           {
-            label: "SOL RSI (WEEKLY)",
-            value: loading && solRsiWeekly == null ? "…" : solRsiWeekly != null ? String(solRsiWeekly) : "—",
+            label: "TAO RSI (WEEKLY)",
+            value: loading && taoRsiWeekly == null ? "…" : taoRsiWeekly != null ? String(taoRsiWeekly) : "—",
             desc: "Entry window below 40 — accumulation phase",
-            color: "#FF6B35",
+            color: "#23F0C6",
           },
           {
-            label: "MSTR mNAV",
+            label: "XRP RSI",
             value: "—",
             desc: "Live data unavailable — verify manually",
             color: "#F4B728",
@@ -1698,8 +1698,8 @@ function SignalsTab() {
       }}>
         <div style={{ display: "flex", alignItems: "stretch", minWidth: 560 }}>
           {[
-            { label: "SOL: EXIT WHEN", detail: "RSI > 78 or BTC.D < 57.5%",       color: "#00FFA3", flexWeight: 1,   state: "done"   },
-            { label: "MSTR: EXIT WHEN", detail: "mNAV > 2.5x or momentum stalls",  color: "#FF6B35", flexWeight: 1.5, state: "active" },
+            { label: "TAO: EXIT WHEN", detail: "RSI > 78 or BTC.D < 57.5%",       color: "#9D4EDD", flexWeight: 1,   state: "done"   },
+            { label: "XRP: EXIT WHEN",  detail: "RSI > 80 or momentum stalls",      color: "#23F0C6", flexWeight: 1.5, state: "active" },
             { label: "ZEC: EXIT WHEN",  detail: "7-day gain > 150% or media peaks", color: "#F4B728", flexWeight: 2,   state: "future" },
             { label: "FIAT",            detail: "No further crypto rotations",       color: "rgba(255,255,255,0.3)", flexWeight: 0.8, state: "future" },
           ].map((node, i, arr) => (
@@ -1752,7 +1752,7 @@ function SignalsTab() {
             </div>
           ))}
           {KEY_THRESHOLDS.map((row, i) => {
-            const ac = row.asset.includes("SOL") ? "#00FFA3" : row.asset.includes("MSTR") ? "#FF6B35" : "#F4B728";
+            const ac = row.asset.includes("TAO") ? "#9D4EDD" : row.asset.includes("XRP") ? "#23F0C6" : "#F4B728";
             return [row.signal, row.asset, row.threshold, row.action, row.window].map((cell, j) => (
               <div key={`${i}-${j}`} style={{
                 padding: "10px 12px",
@@ -1798,7 +1798,7 @@ function SignalsTab() {
 function CyclesTab() {
   const [activeCycle, setActiveCycle] = useState(null);
   const maxMultiple = 96;
-  const cycleColors = ["#00FFA3", "#FF6B35", "#F4B728", "#6450FF"];
+  const cycleColors = ["#9D4EDD", "#23F0C6", "#F4B728", "#6450FF"];
   const maxMonths = 24;
 
   return (
@@ -1813,7 +1813,7 @@ function CyclesTab() {
           fontWeight: 700,
           margin: "0 0 12px",
           lineHeight: 1.2,
-          background: "linear-gradient(135deg, #00FFA3, #FF6B35, #F4B728)",
+          background: "linear-gradient(135deg, #9D4EDD, #23F0C6, #F4B728)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}>
@@ -1926,7 +1926,7 @@ function CyclesTab() {
       {activeCycle !== null && (() => {
         const c = CYCLE_DATA[activeCycle];
         const color = cycleColors[activeCycle];
-        // Map cycle index to PHASES: 2020=SOL(0), 2024=ZEC(2); others use generic narrative
+        // Map cycle index to PHASES: 2020=TAO(0), 2024=ZEC(2); others use generic narrative
         const phaseMap = { 2: PHASES[0], 3: PHASES[2] };
         const ph = phaseMap[activeCycle];
         return (
@@ -2010,7 +2010,7 @@ function CyclesTab() {
         marginBottom: 36,
       }}>
         <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, lineHeight: 1.6, color: "rgba(255,255,255,0.45)", margin: 0 }}>
-          BTC cycle multiples are compressing — 96x → 30x → 7.85x → ~5x. Yet altcoin rotation remains viable precisely because the <span style={{ color: "#F4B728" }}>liquidity overflow dynamic</span> amplifies diminishing BTC gains through sequenced leverage. A 5x BTC move routed through MSTR (1.77x beta) and then into a thin-order-book privacy coin produces outsized terminal returns despite a lower headline BTC multiple.
+          BTC cycle multiples are compressing — 96x → 30x → 7.85x → ~5x. Yet altcoin rotation remains viable precisely because the <span style={{ color: "#F4B728" }}>liquidity overflow dynamic</span> amplifies diminishing BTC gains through sequenced leverage. A 5x BTC move routed through XRP (institutional settlement layer) and then into a thin-order-book privacy coin produces outsized terminal returns despite a lower headline BTC multiple.
         </p>
       </div>
 
@@ -2129,7 +2129,7 @@ function CyclesTab() {
         padding: "24px 26px",
       }}>
         <BlackpaperPara>
-          Across every completed halving cycle, a structurally identical sequence has repeated: Bitcoin consolidates supply shock gains, dominance peaks, capital rotates into the cycle's vanguard altcoin, and finally overflows into legacy assets with thin liquidity and outsized volatility. The instruments differ per cycle — LTC in 2013, ETH in 2017, SOL in 2021 — but the mechanism is invariant.
+          Across every completed halving cycle, a structurally identical sequence has repeated: Bitcoin consolidates supply shock gains, dominance peaks, capital rotates into the cycle's vanguard altcoin, and finally overflows into legacy assets with thin liquidity and outsized volatility. The instruments differ per cycle — LTC in 2013, ETH in 2017, SOL in 2021, TAO in 2024 — but the mechanism is invariant.
         </BlackpaperPara>
         <BlackpaperPara indent>
           Diminishing BTC multiples do not invalidate the cascade. They are a feature of increasing market capitalization, not a failure of the pattern. A market that is ten times larger requires ten times more capital to move — but the <span style={{ color: "#F4B728" }}>rotation sequence itself</span> concentrates that capital into increasingly narrow windows, producing terminal volatility that exceeds earlier cycles in absolute dollar terms even as percentage multiples compress.
@@ -2164,7 +2164,7 @@ function ExecutionTab() {
           fontWeight: 700,
           margin: "0 0 12px",
           lineHeight: 1.2,
-          background: "linear-gradient(135deg, #00FFA3, #FF6B35, #F4B728)",
+          background: "linear-gradient(135deg, #9D4EDD, #23F0C6, #F4B728)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}>
@@ -2180,13 +2180,13 @@ function ExecutionTab() {
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: "rgba(255,255,255,0.3)", letterSpacing: 2 }}>
           PRE-ENTRY CHECKLIST
         </div>
-        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: doneCount === 5 ? "#00FFA3" : "rgba(255,255,255,0.3)", letterSpacing: 1 }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: doneCount === 5 ? "#9D4EDD" : "rgba(255,255,255,0.3)", letterSpacing: 1 }}>
           SETUP PROGRESS — {doneCount} / 5 COMPLETE
         </div>
       </div>
       {/* Progress bar */}
       <div style={{ height: 3, background: "rgba(255,255,255,0.06)", borderRadius: 2, marginBottom: 14, overflow: "hidden" }}>
-        <div style={{ width: `${(doneCount / 5) * 100}%`, height: "100%", background: "linear-gradient(90deg, #00FFA3, #00FFA360)", borderRadius: 2, transition: "width 0.3s ease" }} />
+        <div style={{ width: `${(doneCount / 5) * 100}%`, height: "100%", background: "linear-gradient(90deg, #9D4EDD, #9D4EDD60)", borderRadius: 2, transition: "width 0.3s ease" }} />
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 36 }}>
         {PRE_ENTRY_CHECKLIST.map((row, i) => (
@@ -2199,8 +2199,8 @@ function ExecutionTab() {
             style={{
               display: "flex",
               gap: 16,
-              background: checked[i] ? "rgba(0,255,163,0.04)" : "rgba(255,255,255,0.02)",
-              border: checked[i] ? "1px solid rgba(0,255,163,0.2)" : "1px solid rgba(255,255,255,0.06)",
+              background: checked[i] ? "rgba(157,78,221,0.04)" : "rgba(255,255,255,0.02)",
+              border: checked[i] ? "1px solid rgba(157,78,221,0.2)" : "1px solid rgba(255,255,255,0.06)",
               borderRadius: 8,
               padding: "14px 16px",
               alignItems: "flex-start",
@@ -2212,14 +2212,14 @@ function ExecutionTab() {
               width: 22,
               height: 22,
               borderRadius: "50%",
-              background: checked[i] ? "#00FFA3" : "transparent",
-              border: checked[i] ? "1px solid #00FFA3" : "1px solid rgba(0,255,163,0.4)",
+              background: checked[i] ? "#9D4EDD" : "transparent",
+              border: checked[i] ? "1px solid #9D4EDD" : "1px solid rgba(157,78,221,0.4)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 9,
-              color: checked[i] ? "#000" : "#00FFA3",
+              color: checked[i] ? "#000" : "#9D4EDD",
               transition: "all 0.2s ease",
             }}>
               {checked[i] ? "✓" : i + 1}
@@ -2280,7 +2280,7 @@ function ExecutionTab() {
               ["Exit Trigger", p.exitTrigger],
             ].map(([label, value]) => {
               const isSlippage = label === "Slippage Risk";
-              const slippageColor = isSlippage ? (value === "HIGH" ? "#FF6B35" : "#00FFA3") : null;
+              const slippageColor = isSlippage ? (value === "HIGH" ? "#23F0C6" : "#9D4EDD") : null;
               return (
                 <div key={label} style={{ marginBottom: 9 }}>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 8, color: "rgba(255,255,255,0.3)", letterSpacing: 1.2, marginBottom: 2 }}>
@@ -2323,7 +2323,7 @@ function ExecutionTab() {
       </div>
       <div style={{ overflowX: "auto", marginBottom: 8 }}>
         <div style={{ display: "grid", gridTemplateColumns: "100px 60px 60px 60px 110px 1fr", gap: 0, minWidth: 580 }}>
-          {["Tier", "SOL %", "MSTR %", "ZEC %", "Proj. Terminal", "Notes"].map((h) => (
+          {["Tier", "TAO %", "XRP %", "ZEC %", "Proj. Terminal", "Notes"].map((h) => (
             <div key={h} style={{
               padding: "10px 12px",
               background: "rgba(255,255,255,0.04)",
@@ -2338,22 +2338,22 @@ function ExecutionTab() {
           ))}
           {POSITION_SIZING.map((row) => {
             const BASE = 100000;
-            const sol  = parseFloat(row.solPct)  / 100;
-            const mstr = parseFloat(row.mstrPct) / 100;
+            const tao  = parseFloat(row.taoPct)  / 100;
+            const xrp  = parseFloat(row.xrpPct) / 100;
             const zec  = parseFloat(row.zecPct)  / 100;
             const terminal = BASE * sol * 19.66 * mstr * 3.51 * zec * 33.7;
-            return [row.tier, row.solPct, row.mstrPct, row.zecPct, formatCurrency(terminal), row.note].map((cell, j) => (
+            return [row.tier, row.taoPct, row.xrpPct, row.zecPct, formatCurrency(terminal), row.note].map((cell, j) => (
               <div key={`${row.tier}-${j}`} style={{
                 padding: "12px 12px",
                 borderBottom: "1px solid rgba(255,255,255,0.04)",
-                background: row.isDefault ? "rgba(255,107,53,0.06)" : "transparent",
+                background: row.isDefault ? "rgba(35,240,198,0.06)" : "transparent",
                 fontFamily: j === 0 || j === 4 ? "'JetBrains Mono', monospace" : "'DM Sans', sans-serif",
                 fontSize: j === 0 ? 11 : j === 4 ? 12 : 12,
                 fontWeight: j === 4 ? 600 : undefined,
                 color: j === 0
-                  ? (row.isDefault ? "#FF6B35" : "rgba(255,255,255,0.7)")
-                  : j === 1 ? "#00FFA3"
-                  : j === 2 ? "#FF6B35"
+                  ? (row.isDefault ? "#23F0C6" : "rgba(255,255,255,0.7)")
+                  : j === 1 ? "#9D4EDD"
+                  : j === 2 ? "#23F0C6"
                   : j === 3 ? "#F4B728"
                   : j === 4 ? "#F4B728"
                   : "rgba(255,255,255,0.5)",
@@ -2363,7 +2363,7 @@ function ExecutionTab() {
               }}>
                 {cell}
                 {j === 0 && row.isDefault && (
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 7, color: "#FF6B35", border: "1px solid #FF6B3540", borderRadius: 3, padding: "1px 4px" }}>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 7, color: "#23F0C6", border: "1px solid #23F0C640", borderRadius: 3, padding: "1px 4px" }}>
                     DEFAULT
                   </span>
                 )}
@@ -2397,14 +2397,14 @@ function ExecutionTab() {
                   width: 28,
                   height: 28,
                   borderRadius: "50%",
-                  background: isActive ? "rgba(0,255,163,0.12)" : isDone ? "rgba(0,255,163,0.06)" : "rgba(255,255,255,0.04)",
-                  border: isActive ? "1px solid rgba(0,255,163,0.5)" : isDone ? "1px solid rgba(0,255,163,0.25)" : "1px solid rgba(255,255,255,0.12)",
+                  background: isActive ? "rgba(157,78,221,0.12)" : isDone ? "rgba(157,78,221,0.06)" : "rgba(255,255,255,0.04)",
+                  border: isActive ? "1px solid rgba(157,78,221,0.5)" : isDone ? "1px solid rgba(157,78,221,0.25)" : "1px solid rgba(255,255,255,0.12)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: 10,
-                  color: isActive ? "#00FFA3" : isDone ? "rgba(0,255,163,0.5)" : "rgba(255,255,255,0.5)",
+                  color: isActive ? "#9D4EDD" : isDone ? "rgba(157,78,221,0.5)" : "rgba(255,255,255,0.5)",
                   flexShrink: 0,
                   zIndex: 1,
                   transition: "all 0.2s ease",
@@ -2412,7 +2412,7 @@ function ExecutionTab() {
                   {s.step}
                 </div>
                 {i < EXECUTION_STEPS.length - 1 && (
-                  <div style={{ width: 1, flex: 1, background: isDone ? "rgba(0,255,163,0.2)" : "rgba(255,255,255,0.06)", minHeight: 20, margin: "4px 0", transition: "background 0.2s" }} />
+                  <div style={{ width: 1, flex: 1, background: isDone ? "rgba(157,78,221,0.2)" : "rgba(255,255,255,0.06)", minHeight: 20, margin: "4px 0", transition: "background 0.2s" }} />
                 )}
               </div>
               <div style={{ flex: 1, paddingBottom: i < EXECUTION_STEPS.length - 1 ? 16 : 0 }}>
@@ -2557,8 +2557,8 @@ function BlackpaperDatum({ label, value, color }) {
 }
 
 function Blackpaper() {
-  const g = "#00FFA3";
-  const o = "#FF6B35";
+  const g = "#9D4EDD";
+  const o = "#23F0C6";
   const y = "#F4B728";
 
   return (
@@ -2575,7 +2575,7 @@ function Blackpaper() {
           maxWidth: 480,
           lineHeight: 1.6,
         }}>
-          A Chronological Matrix for Capital Rotation Across Solana, MicroStrategy, and Zcash
+          A Chronological Matrix for Capital Rotation Across Bittensor, XRP, and Zcash
         </p>
         <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.1)", margin: "24px auto 0" }} />
       </div>
@@ -2668,61 +2668,59 @@ function Blackpaper() {
       <BlackpaperSection label="PHASE 1" color={g}>
         <BlackpaperHeading>The Speculative Vanguard</BlackpaperHeading>
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 22, color: g, fontWeight: 700, marginBottom: 20, letterSpacing: -0.5 }}>
-          Solana (SOL)
+          Bittensor (TAO)
         </div>
         <BlackpaperPara>
-          Here is the first heresy of this framework: Solana does not wait for Bitcoin. It moves first.
+          Here is the first heresy of this framework: Bittensor does not wait for Bitcoin. It moves first.
         </BlackpaperPara>
         <BlackpaperPara indent>
           Traditional cycle theory insists that all altcoins lag the benchmark — that they sit patiently until Bitcoin has completed
-          its post-halving ascent and only then begin their secondary expansion. The data from 2022–2024 annihilates this assumption.
-          Solana's primary parabolic move completed{" "}
-          <em style={{ color: g }}>one month before the halving even occurred</em>.
+          its post-halving ascent and only then begin their secondary expansion. The data from 2023–2024 annihilates this assumption.
+          Bittensor's primary parabolic move completed{" "}
+          <em style={{ color: g }}>months before the halving even occurred</em>.
         </BlackpaperPara>
         <BlackpaperPara indent>
-          Why? Because Solana's price engine runs on fundamentally different fuel than Bitcoin's. Its hybrid Proof-of-History consensus
-          model enables sub-second finality and negligible transaction fees, making it the undisputed venue for retail-driven speculation —
-          the memecoin launchpad, the DeFi playground, the NFT bazaar. Retail traders, operating with smaller capital bases and higher risk
-          tolerance, don't wait for the halving. They{" "}
+          Why? Because Bittensor's price engine runs on fundamentally different fuel than Bitcoin's. Its decentralized machine-learning
+          network — where miners compete to produce the best AI models and validators reward the best outputs — is not priced
+          by Bitcoin's supply schedule. It is priced by the AGI narrative and compute scarcity. Retail traders, operating with smaller
+          capital bases and higher risk tolerance, don't wait for the halving. They{" "}
           <em style={{ color: "rgba(255,255,255,0.8)" }}>anticipate</em> the post-halving altcoin season and deploy capital months early,
-          effectively front-running the macro narrative. By the time Bitcoin's supply shock arrives, Solana's move is already over.
+          effectively front-running the macro narrative. By the time Bitcoin's supply shock arrives, Bittensor's move is already over.
         </BlackpaperPara>
         <BlackpaperQuote color={g}>
-          From the ashes of a 97% drawdown — from $260 to $9 in the wreckage of the FTX collapse —
-          Solana executed one of the most ferocious recoveries in crypto history.
+          From the ashes of a 95% drawdown — trading near $46 in October 2023, dismissed as a niche research project —
+          Bittensor executed one of the most ferocious recoveries in crypto history.
         </BlackpaperQuote>
         <BlackpaperPara indent>
           The entry was December 21, 2022. The price:{" "}
-          <BlackpaperDatum value="$9.76" color={g} />. Over the next fifteen months, SOL steadily reclaimed $30,
-          then $100, then went vertical as memecoin liquidity exploded and active developer counts surged.
+          <BlackpaperDatum value="$46.44" color={g} />. Over the next five months, TAO surged as AI compute scarcity
+          became the defining narrative of 2023–2024, and developer subnets proliferated across the network.
           The terminal momentum peak arrived on March 13, 2024 — one month before the halving — at{" "}
-          <BlackpaperDatum value="$191.90" color={g} />. A{" "}
-          <span style={{ color: g, fontWeight: 700 }}>19.66x</span> multiple.
+          <BlackpaperDatum value="$699.94" color={g} />. A{" "}
+          <span style={{ color: g, fontWeight: 700 }}>15.0x</span> multiple.
         </BlackpaperPara>
         <BlackpaperPara indent>
-          Yes, SOL touched $294.85 in early 2025. But the{" "}
-          <em style={{ color: "rgba(255,255,255,0.8)" }}>velocity</em> and <em style={{ color: "rgba(255,255,255,0.8)" }}>efficiency</em>{" "}
-          of the $9 → $191 move is what matters. Capital efficiency, not nominal highs, is the metric that compounds.
-          An initial $100,000 deployed into SOL at the cycle bottom exits as{" "}
-          <BlackpaperDatum value="$1,966,000" color={g} />. The retail vanguard phase is complete.
-          The signal to exit: maximum narrative saturation, network congestion spikes, social euphoria reaching fever pitch.
+          The <em style={{ color: "rgba(255,255,255,0.8)" }}>velocity</em> and <em style={{ color: "rgba(255,255,255,0.8)" }}>efficiency</em>{" "}
+          of the $46 → $699 move is what matters. Capital efficiency, not nominal highs, is the metric that compounds.
+          An initial $100,000 deployed into TAO at the cycle bottom exits as{" "}
+          <BlackpaperDatum value="$1,500,000" color={g} />. The AI compute vanguard phase is complete.
+          The signal to exit: TAO RSI above 78 on the weekly chart, AI narrative saturation, social euphoria reaching fever pitch.
         </BlackpaperPara>
       </BlackpaperSection>
 
       <BlackpaperSection label="INTERLUDE" color="rgba(255,255,255,0.25)">
         <BlackpaperHeading sub>The Mid-Cycle Dilemma</BlackpaperHeading>
         <BlackpaperPara>
-          It is mid-2024. The SOL position has been liquidated at $191.90, and the portfolio sits at nearly $2 million.
-          The next target — MicroStrategy — is already at $120, up from its own December 2022 bottom of $14.50.
-          The amateur investor sees this and feels the sting of a "missed" move.
+          It is March 2024. The TAO position has been liquidated at $699.94, and the portfolio sits at $1.5 million.
+          The next target — XRP — is at $0.52, still suppressed by the lingering SEC lawsuit overhang.
+          The amateur investor sees this and feels the sting of what appears to be a "boring" move.
         </BlackpaperPara>
         <BlackpaperPara indent>
           This is the moment the strategy either survives or dies. The objective of macro capital rotation is not
           to catch the absolute bottom of every single asset simultaneously. That would require a time machine.
           The true edge lies in <span style={{ color: o, fontWeight: 600 }}>chaining expansion phases</span>.
-          MSTR's crawl from $14 to $120 took eighteen grueling months of sideways grinding. During those same eighteen months,
-          that capital was in SOL, earning 19.6x. Rotating into MSTR at $120 is not buying the top — it is boarding
-          a rocket that has just cleared the launch tower.
+          XRP's suppression from the SEC lawsuit kept it at $0.50 for months while capital was deployed into TAO earning 15x. Rotating into XRP at $0.52 is not buying a dead asset — it is boarding
+          a rocket that has just been cleared for launch by the courts.
         </BlackpaperPara>
         <BlackpaperQuote color="rgba(255,255,255,0.35)">
           Rotate based on which asset is entering expansion next. Ignore the nominal distance from its cycle low.
@@ -2733,41 +2731,41 @@ function Blackpaper() {
       <BlackpaperSection label="PHASE 2" color={o}>
         <BlackpaperHeading>The Leveraged Institutional Proxy</BlackpaperHeading>
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 22, color: o, fontWeight: 700, marginBottom: 20, letterSpacing: -0.5 }}>
-          MicroStrategy (MSTR)
+          XRP / Ripple
         </div>
         <BlackpaperPara>
-          MicroStrategy is not a software company. It has not been a software company in any meaningful sense since August 2020,
-          when Michael Saylor repurposed its corporate treasury into the most audacious Bitcoin accumulation vehicle in the history
-          of public markets. What MSTR actually is: a leveraged financial instrument with an embedded beta of approximately 1.77
-          relative to Bitcoin, engineered to amplify every move in the benchmark — up and down.
+          XRP is not a speculative altcoin. It has not been a speculative asset in any meaningful sense since Ripple began
+          building institutional infrastructure for cross-border settlement. What XRP actually is: the liquidity bridge
+          between traditional finance and digital asset rails — engineered to replace correspondent banking for SWIFT transfers,
+          CBDC settlement, and On-Demand Liquidity (ODL) corridors.
         </BlackpaperPara>
         <BlackpaperPara indent>
-          The mechanics are elegant and recursive. When the market prices MSTR at a premium to its underlying Bitcoin holdings —
-          the so-called mNAV premium — the company exploits the disparity. They issue new equity at the inflated valuation,
-          use the proceeds to buy more Bitcoin, and in doing so increase the amount of BTC backing each individual share.
-          The process is accretive. It feeds on itself. And it only works when Bitcoin is going up.
+          The mechanics are elegant and structural. When the SEC dropped its lawsuit and regulatory clarity arrived,
+          institutional capital — long sidelined — flooded back into XRP. CBDC pilots in the UK, Singapore, and UAE
+          accelerated ODL adoption. The result: XRP went from the most legally threatened asset in crypto
+          to the preferred institutional settlement rail in under 12 months.
         </BlackpaperPara>
         <BlackpaperPara indent>
-          This is why MSTR detonates in the post-halving window. When Bitcoin breaks its prior all-time highs — an event that
-          typically materializes 6 to 8 months after the halving — institutional capital, hedge funds, and equity investors
-          scramble for regulated, high-beta exposure. MSTR is the premier vehicle. The result is not a gentle repricing.
-          It is vertical.
+          This is why XRP detonates in the post-halving window. When Bitcoin breaks its prior all-time highs, institutional capital
+          rotates into settlement infrastructure as the next phase of the liquidity cascade. XRP is the premier vehicle
+          for this rotation — regulated, widely held, and with near-unlimited institutional on-ramps.
+          The result is not a gentle repricing. It is vertical.
         </BlackpaperPara>
         <BlackpaperQuote color={o}>
-          In the 2020–2021 cycle, MSTR peaked 9 months post-halving. In the 2024–2025 cycle, the blow-off top
-          came at Month +7. The window is narrow and violent.
+          In the 2024–2025 cycle, XRP surged from $0.52 to $3.14 in three months following regulatory clarity.
+          The window between institutional entry and peak narrative saturation is narrow and violent.
         </BlackpaperQuote>
         <BlackpaperPara indent>
-          Following the April 2024 halving, MicroStrategy climbed 550% through the year. The spot Bitcoin ETF approvals
-          added institutional legitimacy to the underlying thesis. The mNAV premium expanded as fast money piled in.
-          On November 13, 2024, MSTR printed a vertical daily candle to{" "}
-          <BlackpaperDatum value="$421.88" color={o} /> — exactly seven months post-halving.
+          Following the SEC case resolution in 2024, XRP surged as institutional capital flowed into the settlement layer.
+          The CBDC integration narrative accelerated ODL adoption globally. Regulatory tailwinds added legitimacy.
+          On January 8, 2025, XRP printed a vertical candle to{" "}
+          <BlackpaperDatum value="$3.14" color={o} /> — three months after the entry signal triggered.
         </BlackpaperPara>
         <BlackpaperPara indent>
-          The rolled $1.966 million enters at $120. It exits at $421.88. A{" "}
-          <span style={{ color: o, fontWeight: 700 }}>3.51x</span> multiple. The portfolio now stands at{" "}
-          <BlackpaperDatum value="$6,900,660" color={o} />. The exit signal: mNAV premium pushing past 2.0–3.0x,
-          Bitcoin's advance stalling, and the 1.77 beta threatening magnified collapse. The institutional wave has crested.
+          The $1.5 million enters XRP at $0.5241. It exits at $3.14. A{" "}
+          <span style={{ color: o, fontWeight: 700 }}>6.0x</span> multiple. The portfolio now stands at{" "}
+          <BlackpaperDatum value="$7,200,000" color={o} />. The exit signal: XRP RSI above 80 on the weekly chart,
+          price approaching historical ATH with decelerating momentum. The institutional settlement wave has crested.
           What comes next is the most dangerous phase of all.
         </BlackpaperPara>
       </BlackpaperSection>
@@ -2866,8 +2864,8 @@ function Blackpaper() {
         </BlackpaperPara>
         <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 8, overflow: "hidden", margin: "24px 0" }}>
           {[
-            { phase: "1", asset: "SOL", entry: "Month −16", exit: "Month −1", mult: "19.66x", capital: "$1.97M", color: g },
-            { phase: "2", asset: "MSTR", entry: "Month +2", exit: "Month +7", mult: "3.51x", capital: "$6.90M", color: o },
+            { phase: "1", asset: "TAO", entry: "Month −16", exit: "Month −1", mult: "19.66x", capital: "$1.97M", color: g },
+            { phase: "2", asset: "XRP", entry: "Month +2", exit: "Month +7", mult: "3.51x", capital: "$6.90M", color: o },
             { phase: "3", asset: "ZEC", entry: "Month +9", exit: "Month +19", mult: "33.7x", capital: "$232.5M", color: y },
           ].map((row, i) => (
             <div key={i} style={{ display: "grid", gridTemplateColumns: "50px 60px 90px 90px 70px 90px", padding: "12px 16px", borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.04)" : "none", alignItems: "center" }}>
@@ -2882,7 +2880,7 @@ function Blackpaper() {
         </div>
         <BlackpaperPara indent>
           Projected onto the 2028 halving — anticipated for April of that year — the matrix yields four dates:
-          SOL accumulation between September 2026 and August 2027, SOL exit and MSTR entry in March 2028, MSTR exit and ZEC accumulation in November 2028,
+          TAO accumulation between October 2023 and March 2024, TAO exit and XRP entry in October 2024, XRP exit and ZEC accumulation in April 2025,
           and the terminal ZEC liquidation to fiat in November 2029. The assets occupying each archetype may shift.
           The temporal structure, if history holds, will not.
         </BlackpaperPara>
@@ -2936,9 +2934,9 @@ function Blackpaper() {
 }
 
 const CONVERSION_PHASES = [
-  { id: "I", label: "JURISDICTIONAL ENGINEERING", color: "#00FFA3", summary: "Sever domicile from high-tax states and establish residency in a zero-income-tax jurisdiction before the liquidation event." },
+  { id: "I", label: "JURISDICTIONAL ENGINEERING", color: "#9D4EDD", summary: "Sever domicile from high-tax states and establish residency in a zero-income-tax jurisdiction before the liquidation event." },
   { id: "II", label: "FIDUCIARY ARCHITECTURE", color: "#6450FF", summary: "Structure capital within Domestic Asset Protection Trusts and establish a Single-Family Office with Private Trust Company governance." },
-  { id: "III", label: "INSTITUTIONAL LIQUIDATION", color: "#FF6B35", summary: "Execute nine-figure liquidation via institutional OTC desks with locked quotes, bypassing public order books entirely." },
+  { id: "III", label: "INSTITUTIONAL LIQUIDATION", color: "#23F0C6", summary: "Execute nine-figure liquidation via institutional OTC desks with locked quotes, bypassing public order books entirely." },
   { id: "IV", label: "CAPITAL PRESERVATION", color: "#F4B728", summary: "Neutralize counterparty banking risk via FDIC sweep networks and deploy into ultra-low-risk preservation instruments." },
   { id: "V", label: "TREASURY & RE-ENTRY", color: "#00B4FF", summary: "Generate risk-free yield via Treasury ladders, maintain liquidity through SBLOCs, and execute rules-based re-entry into subsequent cycles." },
 ];
@@ -3013,7 +3011,7 @@ function ConversionTab() {
           fontWeight: 700,
           margin: "0 0 12px",
           lineHeight: 1.2,
-          background: "linear-gradient(135deg, #00FFA3, #6450FF, #00B4FF)",
+          background: "linear-gradient(135deg, #9D4EDD, #6450FF, #00B4FF)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}>
@@ -3055,10 +3053,10 @@ function ConversionTab() {
       </div>
 
       {/* PHASE I: JURISDICTIONAL ENGINEERING */}
-      <BlackpaperSection color="#00FFA3" label="PHASE I — JURISDICTIONAL ENGINEERING & DOMICILE SEVERANCE">
+      <BlackpaperSection color="#9D4EDD" label="PHASE I — JURISDICTIONAL ENGINEERING & DOMICILE SEVERANCE">
         <BlackpaperHeading>Tax-Optimal Domicile Selection</BlackpaperHeading>
         <BlackpaperPara>
-          The geographic location of an individual at the exact moment a highly appreciated asset is liquidated dictates the baseline erosion of that capital. Under both federal IRS guidelines and state-level tax codes, cryptocurrency is treated as <span style={{ color: "#00FFA3" }}>intangible personal property</span>. The gain realized from its sale is sourced to the taxpayer's state of residence at the time of the sale. For a $232 million liquidation in a state like California (13.3% top rate), the state tax liability alone would exceed $30 million.
+          The geographic location of an individual at the exact moment a highly appreciated asset is liquidated dictates the baseline erosion of that capital. Under both federal IRS guidelines and state-level tax codes, cryptocurrency is treated as <span style={{ color: "#9D4EDD" }}>intangible personal property</span>. The gain realized from its sale is sourced to the taxpayer's state of residence at the time of the sale. For a $232 million liquidation in a state like California (13.3% top rate), the state tax liability alone would exceed $30 million.
         </BlackpaperPara>
         <BlackpaperPara indent>
           The foundational step in wealth preservation is the legal and absolute severance of domicile from a high-tax state and the establishment of residency in a zero-income-tax jurisdiction. This must be completed well before the 2029 cycle peak — not during it. A mere change of driver's license or voter registration is catastrophically insufficient. Courts have repeatedly upheld tax agency determinations against taxpayers who failed to genuinely sever economic, social, and physical ties.
@@ -3074,7 +3072,7 @@ function ConversionTab() {
             ))}
             {CONVERSION_STATES.map((s) => (
               [s.state, s.rate, s.test, s.protections, s.notes].map((val, i) => (
-                <div key={`${s.state}-${i}`} style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.04)", fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: i === 0 ? "#fff" : i === 1 ? "#00FFA3" : "rgba(255,255,255,0.5)", lineHeight: 1.5, background: i === 1 ? "rgba(0,255,163,0.04)" : "transparent" }}>
+                <div key={`${s.state}-${i}`} style={{ padding: "10px 12px", borderBottom: "1px solid rgba(255,255,255,0.04)", fontFamily: "'DM Sans', sans-serif", fontSize: 12, color: i === 0 ? "#fff" : i === 1 ? "#9D4EDD" : "rgba(255,255,255,0.5)", lineHeight: 1.5, background: i === 1 ? "rgba(157,78,221,0.04)" : "transparent" }}>
                   {i === 0 ? <span style={{ fontWeight: 600 }}>{val}</span> : val}
                 </div>
               ))
@@ -3102,15 +3100,15 @@ function ConversionTab() {
 
         <div style={{
           padding: "14px 18px",
-          background: "rgba(0,255,163,0.03)",
-          border: "1px solid rgba(0,255,163,0.08)",
+          background: "rgba(157,78,221,0.03)",
+          border: "1px solid rgba(157,78,221,0.08)",
           borderRadius: 8,
         }}>
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(0,255,163,0.5)", letterSpacing: 1.5, marginBottom: 6 }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(157,78,221,0.5)", letterSpacing: 1.5, marginBottom: 6 }}>
             CRITICAL TIMELINE
           </div>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, lineHeight: 1.6, color: "rgba(255,255,255,0.5)", margin: 0 }}>
-            Domicile severance must be surgically complete <strong style={{ color: "#00FFA3" }}>12–24 months before</strong> the liquidation event. Physical relocation, property sale in the former state, purchase of primary residence in the new state, migration of banking/professional services, and meticulous presence tracking are all required to survive an audit.
+            Domicile severance must be surgically complete <strong style={{ color: "#9D4EDD" }}>12–24 months before</strong> the liquidation event. Physical relocation, property sale in the former state, purchase of primary residence in the new state, migration of banking/professional services, and meticulous presence tracking are all required to survive an audit.
           </p>
         </div>
       </BlackpaperSection>
@@ -3195,10 +3193,10 @@ function ConversionTab() {
       </BlackpaperSection>
 
       {/* PHASE III: INSTITUTIONAL LIQUIDATION */}
-      <BlackpaperSection color="#FF6B35" label="PHASE III — INSTITUTIONAL LIQUIDATION MECHANICS">
+      <BlackpaperSection color="#23F0C6" label="PHASE III — INSTITUTIONAL LIQUIDATION MECHANICS">
         <BlackpaperHeading>The OTC Desk Imperative</BlackpaperHeading>
         <BlackpaperPara>
-          Executing a market order of $232 million on a public centralized exchange will trigger <span style={{ color: "#FF6B35" }}>catastrophic market slippage</span>. Public order books rarely possess the localized liquidity depth to absorb a nine-figure sell order without collapsing the asset's price. Institutional OTC desks bypass the public order book entirely — sourcing liquidity through proprietary matching engines, dark pools, and direct capital relationships with institutional buyers.
+          Executing a market order of $232 million on a public centralized exchange will trigger <span style={{ color: "#23F0C6" }}>catastrophic market slippage</span>. Public order books rarely possess the localized liquidity depth to absorb a nine-figure sell order without collapsing the asset's price. Institutional OTC desks bypass the public order book entirely — sourcing liquidity through proprietary matching engines, dark pools, and direct capital relationships with institutional buyers.
         </BlackpaperPara>
         <BlackpaperPara indent>
           The OTC desk provides a "locked quote" — a guaranteed, flat execution price for the entire block of assets, typically valid for 30 seconds to a few minutes. By accepting the quote, the seller offloads execution risk and price volatility entirely onto the provider. The market remains blind to the transaction until post-trade settlement, preventing predatory HFT algorithms from front-running the liquidation.
@@ -3224,16 +3222,16 @@ function ConversionTab() {
 
         <div style={{
           padding: "14px 18px",
-          background: "rgba(255,107,53,0.04)",
-          border: "1px solid rgba(255,107,53,0.1)",
+          background: "rgba(35,240,198,0.04)",
+          border: "1px solid rgba(35,240,198,0.1)",
           borderRadius: 8,
           marginBottom: 28,
         }}>
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(255,107,53,0.6)", letterSpacing: 1.5, marginBottom: 6 }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: "rgba(35,240,198,0.6)", letterSpacing: 1.5, marginBottom: 6 }}>
             TEST TRANSACTION PROTOCOL
           </div>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 12, lineHeight: 1.65, color: "rgba(255,255,255,0.5)", margin: 0 }}>
-            Before executing the full transaction, run a <strong style={{ color: "#FF6B35" }}>$50K–$100K test</strong> through the entire OTC pipeline. Verify that digital assets move securely to the desk and that resulting fiat clears the banking system without triggering automated AML freezes — which are extremely common when sudden massive wire transfers hit standard retail bank accounts.
+            Before executing the full transaction, run a <strong style={{ color: "#23F0C6" }}>$50K–$100K test</strong> through the entire OTC pipeline. Verify that digital assets move securely to the desk and that resulting fiat clears the banking system without triggering automated AML freezes — which are extremely common when sudden massive wire transfers hit standard retail bank accounts.
           </p>
         </div>
 
@@ -3379,7 +3377,7 @@ function ConversionTab() {
 export default function LiquidityCascade() {
   const [activePhase, setActivePhase] = useState(0);
   const [activeNav, setActiveNav] = useState("overview");
-  const { solPrice, zecPrice } = useMarketData();
+  const { taoPrice, zecPrice } = useMarketData();
 
   return (
     <>
@@ -3398,7 +3396,7 @@ export default function LiquidityCascade() {
             fontWeight: 700,
             margin: "0 0 6px",
             lineHeight: 1.15,
-            background: "linear-gradient(135deg, #00FFA3, #FF6B35, #F4B728)",
+            background: "linear-gradient(135deg, #9D4EDD, #23F0C6, #F4B728)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -3406,7 +3404,7 @@ export default function LiquidityCascade() {
           The Liquidity Cascade
         </h1>
         <p style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", margin: "0 0 24px", maxWidth: 620, lineHeight: 1.55 }}>
-          A chronological matrix for capital rotation across Solana, MicroStrategy, and Zcash — anchored to the Bitcoin halving as the definitive temporal fulcrum.
+          A chronological matrix for capital rotation across Bittensor, XRP, and Zcash — anchored to the Bitcoin halving as the definitive temporal fulcrum.
         </p>
 
         <nav aria-label="Dashboard sections">
@@ -3450,7 +3448,7 @@ export default function LiquidityCascade() {
                   isActive={activePhase === i}
                   onClick={() => setActivePhase(i)}
                   currentPrice={
-                    p.asset === "SOL" ? solPrice :
+                    p.asset === "TAO" ? taoPrice :
                     p.asset === "ZEC" ? zecPrice :
                     undefined
                   }
@@ -3481,7 +3479,7 @@ export default function LiquidityCascade() {
               </div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, lineHeight: 1.65, color: "rgba(255,255,255,0.55)", margin: "0 0 10px" }}>
                 The objective of macro capital rotation is not catching the absolute bottom of every asset simultaneously. The true edge lies in{" "}
-                <span style={{ color: "#FF6B35" }}>chaining expansion phases</span>. While MSTR moved from $14 to $120 over 18 months, that same capital deployed in SOL generated
+                <span style={{ color: "#23F0C6" }}>chaining expansion phases</span>. While XRP was suppressed by the SEC lawsuit for 18 months, that same capital deployed in TAO generated
                 a 19.6x return. One must rotate based on which asset is entering expansion next, ignoring nominal distance from cycle lows.
               </p>
             </div>
