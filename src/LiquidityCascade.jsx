@@ -7,8 +7,8 @@ const PHASES = [
     asset: 'TAO',
     name: 'Bittensor',
     role: 'AI Compute Vanguard',
-    color: '#9D4EDD',
-    colorDim: 'rgba(157,78,221,0.12)',
+    color: 'var(--color-tao)',
+    colorDim: 'var(--color-tao-dim)',
     entryDate: 'Oct 19, 2023',
     exitDate: 'Mar 8, 2024',
     entryPrice: '$46.44',
@@ -35,8 +35,8 @@ const PHASES = [
     asset: 'XRP',
     name: 'Ripple',
     role: 'Institutional Settlement',
-    color: '#23F0C6',
-    colorDim: 'rgba(35,240,198,0.12)',
+    color: 'var(--color-xrp)',
+    colorDim: 'var(--color-xrp-dim)',
     entryDate: 'Oct 2, 2024',
     exitDate: 'Jan 8, 2025',
     entryPrice: '$0.5241',
@@ -63,8 +63,8 @@ const PHASES = [
     asset: 'ZEC (W1)',
     name: 'Zcash Wave 1',
     role: 'Privacy Detonation',
-    color: '#F4B728',
-    colorDim: 'rgba(244,183,40,0.12)',
+    color: 'var(--color-zec)',
+    colorDim: 'var(--color-accent-zec-dim)',
     entryDate: 'Apr 9, 2025',
     exitDate: 'Nov 12, 2025',
     entryPrice: '$31.17',
@@ -91,8 +91,8 @@ const PHASES = [
     asset: 'ZEC (W2)',
     name: 'Zcash Wave 2',
     role: 'Discipline Trade',
-    color: '#F4B728',
-    colorDim: 'rgba(244,183,40,0.12)',
+    color: 'var(--color-zec)',
+    colorDim: 'var(--color-accent-zec-dim)',
     entryDate: 'Mar 7, 2026',
     exitDate: 'May 19, 2026',
     entryPrice: '$197.82',
@@ -129,11 +129,11 @@ const SIGNAL_GRID = [
   {
     phase: 1,
     asset: 'TAO',
-    color: '#9D4EDD',
+    color: 'var(--color-tao)',
     entryWindow: 'Sep 2026 – Aug 2027',
     historicalPrecedent: 'Oct 2023 entry during AI enthusiasm, pre-ETF approval narratives',
     signals: [
-      { id: 'S1-1', threshold: 'BTC Dominance < 45%', action: 'Accumulate TAO', status: 'ARMED' },
+      { id: 'S1-1', threshold: 'BTC Dominance ≤ 45%', action: 'Accumulate TAO', status: 'ARMED' },
       { id: 'S1-2', threshold: 'TAO RSI ≤ 30 (oversold)', action: 'Add to position', status: 'ARMED' },
       { id: 'S1-3', threshold: 'Fed funds rate cut cycle begins', action: 'Increase allocation', status: 'ARMED' },
       { id: 'S1-4', threshold: 'TAO breaks $50 resistance', action: 'Position confirmation', status: 'ARMED' },
@@ -142,7 +142,7 @@ const SIGNAL_GRID = [
   {
     phase: 2,
     asset: 'XRP',
-    color: '#23F0C6',
+    color: 'var(--color-xrp)',
     entryWindow: 'Mar 2028 – Jun 2028',
     historicalPrecedent: 'Oct 2024 entry on regulatory clarity, pre-CBDC adoption wave',
     signals: [
@@ -155,7 +155,7 @@ const SIGNAL_GRID = [
   {
     phase: 3,
     asset: 'ZEC',
-    color: '#F4B728',
+    color: 'var(--color-zec)',
     entryWindow: 'Jun 2028 – Jan 2029',
     historicalPrecedent: 'Apr 2025 entry on privacy anxiety, CBDC regulatory escalation',
     signals: [
@@ -168,7 +168,7 @@ const SIGNAL_GRID = [
   {
     phase: 4,
     asset: 'ZEC (W2)',
-    color: '#F4B728',
+    color: 'var(--color-zec)',
     entryWindow: 'Jan 2029 – May 2029',
     historicalPrecedent: 'Mar 2026 redeployment, buying dips in proven winners',
     signals: [
@@ -188,7 +188,7 @@ function GalaxyBackground() {
       left: 0,
       width: '100%',
       height: '100%',
-      background: '#0A0B0F',
+      background: 'var(--color-bg-base)',
       zIndex: -1,
       overflow: 'hidden',
     }}>
@@ -239,27 +239,47 @@ function PhaseCard({ phase, marketData }) {
     <div style={{
       background: phase.colorDim,
       border: `1px solid ${phase.color}`,
-      borderRadius: '8px',
-      padding: '16px',
-      color: '#FFFFFF',
-      fontFamily: 'DM Sans, sans-serif',
+      borderRadius: 'var(--radius-2xl)',
+      padding: 'var(--spacing-4xl)',
+      color: 'var(--color-text-primary)',
+      fontFamily: 'var(--font-sans)',
       cursor: 'pointer',
-      transition: 'all 0.3s ease',
+      transition: 'all var(--transition-normal)',
     }}>
-      <div style={{ fontSize: '14px', fontWeight: 600, color: phase.color, marginBottom: '8px' }}>
+      <div style={{
+        fontSize: 'var(--font-size-md)',
+        fontWeight: 'var(--font-weight-semibold)',
+        color: phase.color,
+        marginBottom: 'var(--spacing-md)',
+      }}>
         {phase.asset}
       </div>
-      <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', marginBottom: '8px' }}>
+      <div style={{
+        fontSize: 'var(--font-size-base)',
+        color: 'var(--color-text-tertiary)',
+        marginBottom: 'var(--spacing-md)',
+      }}>
         {phase.name}
       </div>
-      <div style={{ fontSize: '13px', marginBottom: '8px' }}>
+      <div style={{
+        fontSize: 'var(--font-size-lg)',
+        marginBottom: 'var(--spacing-md)',
+      }}>
         Entry: {phase.entryPrice} → Exit: {phase.exitPrice}
       </div>
-      <div style={{ fontSize: '18px', fontWeight: 700, color: phase.color }}>
+      <div style={{
+        fontSize: 'var(--font-size-3xl)',
+        fontWeight: 'var(--font-weight-bold)',
+        color: phase.color,
+      }}>
         {phase.multiple}
       </div>
       {currentPrice > 0 && (
-        <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
+        <div style={{
+          fontSize: 'var(--font-size-xs)',
+          color: 'var(--color-text-faint)',
+          marginTop: 'var(--spacing-md)',
+        }}>
           Current: ${currentPrice.toFixed(2)}
         </div>
       )}
@@ -269,19 +289,30 @@ function PhaseCard({ phase, marketData }) {
 
 function OverviewTab({ marketData }) {
   return (
-    <div style={{ padding: '24px' }}>
-      <h1 style={{ fontSize: '32px', fontWeight: 700, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h1 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-bold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+        fontFamily: 'var(--font-display)',
+      }}>
         Supercycle: 6,608x Return (19 Months)
       </h1>
 
-      <div style={{ marginBottom: '32px' }}>
-        <h2 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.8)' }}>
+      <div style={{ marginBottom: 'var(--spacing-7xl)' }}>
+        <h2 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          marginBottom: 'var(--spacing-4xl)',
+          color: 'var(--color-text-secondary)',
+        }}>
           Phase Overview
         </h2>
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '16px',
+          gap: 'var(--spacing-lg)',
         }}>
           {PHASES.map(phase => (
             <PhaseCard key={phase.id} phase={phase} marketData={marketData} />
@@ -289,37 +320,75 @@ function OverviewTab({ marketData }) {
         </div>
       </div>
 
-      <div style={{ marginBottom: '32px' }}>
-        <h2 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.8)' }}>
+      <div style={{ marginBottom: 'var(--spacing-7xl)' }}>
+        <h2 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          marginBottom: 'var(--spacing-4xl)',
+          color: 'var(--color-text-secondary)',
+        }}>
           Capital Flow Summary
         </h2>
         <table style={{
           width: '100%',
           borderCollapse: 'collapse',
-          fontFamily: 'JetBrains Mono, monospace',
-          fontSize: '12px',
+          fontFamily: 'var(--font-mono)',
+          fontSize: 'var(--font-size-base)',
         }}>
           <thead>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-              <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phase</th>
-              <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Asset</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Entry Capital</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Exit Capital</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Multiple</th>
+            <tr style={{ borderBottom: '1px solid var(--color-bg-border)' }}>
+              <th style={{
+                textAlign: 'left',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Phase</th>
+              <th style={{
+                textAlign: 'left',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Asset</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Entry Capital</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Exit Capital</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Multiple</th>
             </tr>
           </thead>
           <tbody>
             {PHASES.map(phase => (
-              <tr key={phase.id} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-                <td style={{ padding: '12px', color: phase.color }}>Phase {phase.id}</td>
-                <td style={{ padding: '12px', color: '#FFFFFF' }}>{phase.asset}</td>
-                <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>
+              <tr key={phase.id} style={{ borderBottom: '1px solid var(--color-bg-border-subtle)' }}>
+                <td style={{ padding: 'var(--spacing-xl)', color: phase.color }}>Phase {phase.id}</td>
+                <td style={{ padding: 'var(--spacing-xl)', color: 'var(--color-text-primary)' }}>{phase.asset}</td>
+                <td style={{
+                  textAlign: 'right',
+                  padding: 'var(--spacing-xl)',
+                  color: 'var(--color-text-secondary)',
+                }}>
                   ${(phase.capitalIn / 1000000).toFixed(2)}M
                 </td>
-                <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>
+                <td style={{
+                  textAlign: 'right',
+                  padding: 'var(--spacing-xl)',
+                  color: 'var(--color-text-secondary)',
+                }}>
                   ${(phase.capitalOut / 1000000).toFixed(2)}M
                 </td>
-                <td style={{ textAlign: 'right', padding: '12px', color: phase.color, fontWeight: 600 }}>
+                <td style={{
+                  textAlign: 'right',
+                  padding: 'var(--spacing-xl)',
+                  color: phase.color,
+                  fontWeight: 'var(--font-weight-semibold)',
+                }}>
                   {phase.multiple}
                 </td>
               </tr>
@@ -329,13 +398,13 @@ function OverviewTab({ marketData }) {
       </div>
 
       <div style={{
-        background: 'rgba(157,78,221,0.1)',
-        border: '1px solid rgba(157,78,221,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '13px',
-        lineHeight: '1.6',
+        background: 'var(--color-tao-dim)',
+        border: '1px solid var(--color-tao)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-lg)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Total Cycle Return:</strong> $100,000 → $660,800,000 (6,608x) over 19 months (Oct 2023 – May 2026)
       </div>
@@ -345,72 +414,82 @@ function OverviewTab({ marketData }) {
 
 function MacroTab() {
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Macro Context
       </h2>
 
-      <div style={{ marginBottom: '32px' }}>
-        <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.8)' }}>
+      <div style={{ marginBottom: 'var(--spacing-7xl)' }}>
+        <h3 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          marginBottom: 'var(--spacing-4xl)',
+          color: 'var(--color-text-secondary)',
+        }}>
           Bitcoin Halving History
         </h3>
         <table style={{
           width: '100%',
           borderCollapse: 'collapse',
-          fontFamily: 'JetBrains Mono, monospace',
-          fontSize: '12px',
+          fontFamily: 'var(--font-mono)',
+          fontSize: 'var(--font-size-base)',
         }}>
           <thead>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-              <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Halving Date</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Pre-Halving Peak</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Post-Halving Trough</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Cycle Duration</th>
+            <tr style={{ borderBottom: '1px solid var(--color-bg-border)' }}>
+              <th style={{
+                textAlign: 'left',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Halving Date</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Pre-Halving Peak</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Post-Halving Trough</th>
+              <th style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>Cycle Duration</th>
             </tr>
           </thead>
           <tbody>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px' }}>Jan 3, 2009 (Genesis)</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$0.01</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$0.01</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>—</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px' }}>Nov 28, 2012</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$1,147</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$404</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>17 months</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px' }}>Jul 9, 2016</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$19,000</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$3,750</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>18 months</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px' }}>May 11, 2020</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$69,000</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>$29,000</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>19 months</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px' }}>Apr 19, 2024</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>Projected: $150,000</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>Projected: $75,000</td>
-              <td style={{ textAlign: 'right', padding: '12px' }}>19 months expected</td>
-            </tr>
+            {[
+              ['Jan 3, 2009 (Genesis)', '$0.01', '$0.01', '—'],
+              ['Nov 28, 2012', '$1,147', '$404', '17 months'],
+              ['Jul 9, 2016', '$19,000', '$3,750', '18 months'],
+              ['May 11, 2020', '$69,000', '$29,000', '19 months'],
+              ['Apr 19, 2024', 'Projected: $150,000', 'Projected: $75,000', '19 months expected'],
+            ].map((row, i) => (
+              <tr key={i} style={{ borderBottom: '1px solid var(--color-bg-border-subtle)' }}>
+                <td style={{ padding: 'var(--spacing-xl)' }}>{row[0]}</td>
+                <td style={{ textAlign: 'right', padding: 'var(--spacing-xl)' }}>{row[1]}</td>
+                <td style={{ textAlign: 'right', padding: 'var(--spacing-xl)' }}>{row[2]}</td>
+                <td style={{ textAlign: 'right', padding: 'var(--spacing-xl)' }}>{row[3]}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
 
       <div style={{
-        background: 'rgba(35,240,198,0.1)',
-        border: '1px solid rgba(35,240,198,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '13px',
-        lineHeight: '1.6',
+        background: 'var(--color-xrp-dim)',
+        border: '1px solid var(--color-xrp)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-lg)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Key Pattern:</strong> Bitcoin halvings create 18–19 month cycles with 3 distinct phases: pre-halving euphoria, post-halving correction, and recovery. Altcoin layers (AI compute, settlement, privacy) rotate systematically through these phases.
       </div>
@@ -420,8 +499,13 @@ function MacroTab() {
 
 function PhasesTab() {
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Phase Deep Dives
       </h2>
 
@@ -429,49 +513,99 @@ function PhasesTab() {
         <div key={phase.id} style={{
           background: phase.colorDim,
           border: `1px solid ${phase.color}`,
-          borderRadius: '8px',
-          padding: '24px',
-          marginBottom: '24px',
-          color: '#FFFFFF',
+          borderRadius: 'var(--radius-2xl)',
+          padding: 'var(--spacing-6xl)',
+          marginBottom: 'var(--spacing-6xl)',
+          color: 'var(--color-text-primary)',
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            marginBottom: 'var(--spacing-4xl)',
+          }}>
             <div>
-              <h3 style={{ fontSize: '20px', fontWeight: 700, color: phase.color, margin: '0 0 4px 0' }}>
+              <h3 style={{
+                fontSize: 'var(--font-size-5xl)',
+                fontWeight: 'var(--font-weight-bold)',
+                color: phase.color,
+                margin: '0 0 var(--spacing-sm) 0',
+              }}>
                 Phase {phase.id}: {phase.asset}
               </h3>
-              <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+              <div style={{
+                fontSize: 'var(--font-size-lg)',
+                color: 'var(--color-text-tertiary)',
+              }}>
                 {phase.name} — {phase.role}
               </div>
             </div>
-            <div style={{ fontSize: '24px', fontWeight: 700, color: phase.color }}>
+            <div style={{
+              fontSize: 'var(--font-size-5xl)',
+              fontWeight: 'var(--font-weight-bold)',
+              color: phase.color,
+            }}>
               {phase.multiple}
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px', fontSize: '12px' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 'var(--spacing-4xl)',
+            marginBottom: 'var(--spacing-4xl)',
+            fontSize: 'var(--font-size-md)',
+          }}>
             <div>
-              <div style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>Entry</div>
-              <div style={{ color: '#FFFFFF', fontWeight: 600 }}>{phase.entryDate} @ {phase.entryPrice}</div>
+              <div style={{ color: 'var(--color-text-tertiary)', marginBottom: 'var(--spacing-md)' }}>Entry</div>
+              <div style={{
+                color: 'var(--color-text-primary)',
+                fontWeight: 'var(--font-weight-semibold)',
+              }}>
+                {phase.entryDate} @ {phase.entryPrice}
+              </div>
             </div>
             <div>
-              <div style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>Exit</div>
-              <div style={{ color: '#FFFFFF', fontWeight: 600 }}>{phase.exitDate} @ {phase.exitPrice}</div>
+              <div style={{ color: 'var(--color-text-tertiary)', marginBottom: 'var(--spacing-md)' }}>Exit</div>
+              <div style={{
+                color: 'var(--color-text-primary)',
+                fontWeight: 'var(--font-weight-semibold)',
+              }}>
+                {phase.exitDate} @ {phase.exitPrice}
+              </div>
             </div>
           </div>
 
-          <div style={{ marginBottom: '16px', lineHeight: '1.6', fontSize: '13px' }}>
-            <div style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '8px' }}>
+          <div style={{
+            marginBottom: 'var(--spacing-4xl)',
+            lineHeight: 'var(--line-height-loose)',
+            fontSize: 'var(--font-size-lg)',
+          }}>
+            <div style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--spacing-md)' }}>
               {phase.description}
             </div>
           </div>
 
-          <div style={{ marginBottom: '16px' }}>
-            <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', marginBottom: '8px', fontWeight: 600 }}>
+          <div style={{ marginBottom: 'var(--spacing-4xl)' }}>
+            <div style={{
+              fontSize: 'var(--font-size-md)',
+              color: 'var(--color-text-tertiary)',
+              marginBottom: 'var(--spacing-xl)',
+              fontWeight: 'var(--font-weight-semibold)',
+            }}>
               MECHANICS
             </div>
-            <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '12px', color: 'rgba(255,255,255,0.7)', lineHeight: '1.6' }}>
+            <ul style={{
+              margin: 0,
+              paddingLeft: 'var(--spacing-4xl)',
+              fontSize: 'var(--font-size-lg)',
+              color: 'var(--color-text-secondary)',
+              lineHeight: 'var(--line-height-loose)',
+            }}>
               {phase.mechanics.map((mech, i) => (
-                <li key={i}>{mech}</li>
+                <li key={i} style={{ marginBottom: 'var(--spacing-md)' }}>
+                  {mech}
+                </li>
               ))}
             </ul>
           </div>
@@ -479,36 +613,38 @@ function PhasesTab() {
           <div style={{
             background: 'rgba(255,255,255,0.03)',
             border: `1px solid ${phase.color}20`,
-            borderRadius: '6px',
-            padding: '12px',
-            fontSize: '12px',
-            marginBottom: '12px',
+            borderRadius: 'var(--radius-lg)',
+            padding: 'var(--spacing-2xl)',
+            fontSize: 'var(--font-size-md)',
+            marginBottom: 'var(--spacing-xl)',
           }}>
-            <div style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>Entry Signal</div>
-            <div style={{ color: 'rgba(255,255,255,0.8)' }}>{phase.entrySignal}</div>
+            <div style={{ color: 'var(--color-text-tertiary)', marginBottom: 'var(--spacing-md)' }}>Entry Signal</div>
+            <div style={{ color: 'var(--color-text-secondary)' }}>{phase.entrySignal}</div>
           </div>
 
           <div style={{
             background: 'rgba(255,255,255,0.03)',
             border: `1px solid ${phase.color}20`,
-            borderRadius: '6px',
-            padding: '12px',
-            fontSize: '12px',
-            marginBottom: '12px',
+            borderRadius: 'var(--radius-lg)',
+            padding: 'var(--spacing-2xl)',
+            fontSize: 'var(--font-size-md)',
+            marginBottom: 'var(--spacing-xl)',
           }}>
-            <div style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>Exit Signal</div>
-            <div style={{ color: 'rgba(255,255,255,0.8)' }}>{phase.exitSignal}</div>
+            <div style={{ color: 'var(--color-text-tertiary)', marginBottom: 'var(--spacing-md)' }}>Exit Signal</div>
+            <div style={{ color: 'var(--color-text-secondary)' }}>{phase.exitSignal}</div>
           </div>
 
           <div style={{
             background: 'rgba(255,255,255,0.02)',
-            borderRadius: '6px',
-            padding: '12px',
-            fontSize: '12px',
+            borderRadius: 'var(--radius-lg)',
+            padding: 'var(--spacing-2xl)',
+            fontSize: 'var(--font-size-md)',
             borderLeft: `3px solid ${phase.color}`,
           }}>
-            <div style={{ color: phase.color, fontWeight: 600, marginBottom: '4px' }}>Key Insight</div>
-            <div style={{ color: 'rgba(255,255,255,0.7)' }}>{phase.keyInsight}</div>
+            <div style={{ color: phase.color, fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-md)' }}>
+              Key Insight
+            </div>
+            <div style={{ color: 'var(--color-text-secondary)' }}>{phase.keyInsight}</div>
           </div>
         </div>
       ))}
@@ -518,67 +654,100 @@ function PhasesTab() {
 
 function SignalsTab({ marketData }) {
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Trading Signals
       </h2>
 
       {SIGNAL_GRID.map(grid => (
         <div key={grid.phase} style={{
-          background: grid.colorDim,
+          background: grid.color === 'var(--color-tao)' ? 'var(--color-tao-dim)' : grid.color === 'var(--color-xrp)' ? 'var(--color-xrp-dim)' : 'var(--color-accent-zec-dim)',
           border: `1px solid ${grid.color}`,
-          borderRadius: '8px',
-          padding: '20px',
-          marginBottom: '24px',
-          color: '#FFFFFF',
+          borderRadius: 'var(--radius-2xl)',
+          padding: 'var(--spacing-5xl)',
+          marginBottom: 'var(--spacing-6xl)',
+          color: 'var(--color-text-primary)',
         }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: grid.color, margin: 0 }}>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: 'var(--spacing-xl)',
+          }}>
+            <h3 style={{
+              fontSize: 'var(--font-size-4xl)',
+              fontWeight: 'var(--font-weight-bold)',
+              color: grid.color,
+              margin: 0,
+            }}>
               Phase {grid.phase}: {grid.asset}
             </h3>
-            <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>
+            <div style={{
+              fontSize: 'var(--font-size-md)',
+              color: 'var(--color-text-tertiary)',
+            }}>
               Entry Window: {grid.entryWindow}
             </div>
           </div>
 
           <div style={{
             background: 'rgba(255,255,255,0.03)',
-            borderRadius: '6px',
-            padding: '12px',
-            marginBottom: '16px',
-            fontSize: '12px',
-            color: 'rgba(255,255,255,0.7)',
-            lineHeight: '1.5',
+            borderRadius: 'var(--radius-lg)',
+            padding: 'var(--spacing-2xl)',
+            marginBottom: 'var(--spacing-4xl)',
+            fontSize: 'var(--font-size-md)',
+            color: 'var(--color-text-secondary)',
+            lineHeight: 'var(--line-height-loose)',
           }}>
             <strong>Historical Precedent:</strong> {grid.historicalPrecedent}
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 'var(--spacing-xl)',
+          }}>
             {grid.signals.map(signal => (
               <div key={signal.id} style={{
                 background: 'rgba(255,255,255,0.02)',
                 border: `1px solid ${grid.color}40`,
-                borderRadius: '6px',
-                padding: '12px',
-                fontSize: '11px',
+                borderRadius: 'var(--radius-lg)',
+                padding: 'var(--spacing-2xl)',
+                fontSize: 'var(--font-size-base)',
               }}>
-                <div style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '4px' }}>
+                <div style={{
+                  color: 'var(--color-text-tertiary)',
+                  marginBottom: 'var(--spacing-md)',
+                }}>
                   {signal.id}
                 </div>
-                <div style={{ color: '#FFFFFF', fontWeight: 600, marginBottom: '6px', fontSize: '12px' }}>
+                <div style={{
+                  color: 'var(--color-text-primary)',
+                  fontWeight: 'var(--font-weight-semibold)',
+                  marginBottom: 'var(--spacing-md)',
+                  fontSize: 'var(--font-size-md)',
+                }}>
                   {signal.threshold}
                 </div>
-                <div style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '8px' }}>
+                <div style={{
+                  color: 'var(--color-text-secondary)',
+                  marginBottom: 'var(--spacing-md)',
+                }}>
                   Action: {signal.action}
                 </div>
                 <div style={{
                   display: 'inline-block',
                   background: signal.status === 'ARMED' ? 'rgba(157,78,221,0.3)' : 'rgba(255,255,255,0.1)',
-                  color: signal.status === 'ARMED' ? '#9D4EDD' : 'rgba(255,255,255,0.5)',
-                  padding: '4px 8px',
-                  borderRadius: '4px',
-                  fontSize: '10px',
-                  fontWeight: 600,
+                  color: signal.status === 'ARMED' ? 'var(--color-tao)' : 'var(--color-text-tertiary)',
+                  padding: 'var(--spacing-md) var(--spacing-xl)',
+                  borderRadius: 'var(--radius-md)',
+                  fontSize: 'var(--font-size-xs)',
+                  fontWeight: 'var(--font-weight-semibold)',
                 }}>
                   {signal.status}
                 </div>
@@ -589,13 +758,13 @@ function SignalsTab({ marketData }) {
       ))}
 
       <div style={{
-        background: 'rgba(244,183,40,0.1)',
-        border: '1px solid rgba(244,183,40,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '12px',
-        lineHeight: '1.6',
+        background: 'var(--color-accent-zec-dim)',
+        border: '1px solid var(--color-zec)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-md)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Signal Status Key:</strong> ARMED = Signal ready for current phase | PENDING = Future phase, not yet active
       </div>
@@ -605,60 +774,95 @@ function SignalsTab({ marketData }) {
 
 function CyclesTab() {
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Historical Cycles & Projections
       </h2>
 
       <table style={{
         width: '100%',
         borderCollapse: 'collapse',
-        fontFamily: 'JetBrains Mono, monospace',
-        fontSize: '12px',
-        marginBottom: '32px',
+        fontFamily: 'var(--font-mono)',
+        fontSize: 'var(--font-size-base)',
+        marginBottom: 'var(--spacing-7xl)',
       }}>
         <thead>
-          <tr style={{ borderBottom: '2px solid rgba(255,255,255,0.1)' }}>
-            <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Cycle</th>
-            <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Period</th>
-            <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phases</th>
-            <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Total Return</th>
-            <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Status</th>
+          <tr style={{ borderBottom: '2px solid var(--color-bg-border)' }}>
+            <th style={{
+              textAlign: 'left',
+              padding: 'var(--spacing-xl)',
+              color: 'var(--color-text-muted)',
+            }}>Cycle</th>
+            <th style={{
+              textAlign: 'left',
+              padding: 'var(--spacing-xl)',
+              color: 'var(--color-text-muted)',
+            }}>Period</th>
+            <th style={{
+              textAlign: 'right',
+              padding: 'var(--spacing-xl)',
+              color: 'var(--color-text-muted)',
+            }}>Phases</th>
+            <th style={{
+              textAlign: 'right',
+              padding: 'var(--spacing-xl)',
+              color: 'var(--color-text-muted)',
+            }}>Total Return</th>
+            <th style={{
+              textAlign: 'right',
+              padding: 'var(--spacing-xl)',
+              color: 'var(--color-text-muted)',
+            }}>Status</th>
           </tr>
         </thead>
         <tbody>
-          <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            <td style={{ padding: '12px', color: '#9D4EDD' }}>2020 Cycle</td>
-            <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>May 2020 – Aug 2021</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>L1 + L2 Rotation</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>45–65x</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>Complete</td>
-          </tr>
-          <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            <td style={{ padding: '12px', color: '#23F0C6' }}>2024 Cycle</td>
-            <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>Apr 2024 – Aug 2025</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>L1 + L2 Rotation</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>32–48x</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>In Progress</td>
-          </tr>
-          <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            <td style={{ padding: '12px', color: '#F4B728' }}>2028 Cycle (Projected)</td>
-            <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>Apr 2028 – Aug 2029</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>L1 + L2 + L3 Rotation</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.7)' }}>100–150x</td>
-            <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>Pending</td>
-          </tr>
+          {[
+            ['2020 Cycle', 'May 2020 – Aug 2021', 'L1 + L2 Rotation', '45–65x', 'Complete', 'var(--color-tao)'],
+            ['2024 Cycle', 'Apr 2024 – Aug 2025', 'L1 + L2 Rotation', '32–48x', 'In Progress', 'var(--color-xrp)'],
+            ['2028 Cycle (Projected)', 'Apr 2028 – Aug 2029', 'L1 + L2 + L3 Rotation', '100–150x', 'Pending', 'var(--color-zec)'],
+          ].map((row, i) => (
+            <tr key={i} style={{ borderBottom: '1px solid var(--color-bg-border-subtle)' }}>
+              <td style={{ padding: 'var(--spacing-xl)', color: row[5] }}>{row[0]}</td>
+              <td style={{ padding: 'var(--spacing-xl)', color: 'var(--color-text-secondary)' }}>{row[1]}</td>
+              <td style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-secondary)',
+              }}>
+                {row[2]}
+              </td>
+              <td style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-secondary)',
+              }}>
+                {row[3]}
+              </td>
+              <td style={{
+                textAlign: 'right',
+                padding: 'var(--spacing-xl)',
+                color: 'var(--color-text-muted)',
+              }}>
+                {row[4]}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
 
       <div style={{
-        background: 'rgba(157,78,221,0.1)',
-        border: '1px solid rgba(157,78,221,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '13px',
-        lineHeight: '1.6',
+        background: 'var(--color-tao-dim)',
+        border: '1px solid var(--color-tao)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-lg)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Projection Notes:</strong> 2028 cycle projections are based on extrapolation of 2020 and 2024 patterns. Privacy layer integration (ZEC) is the new variable. If CBDC rollout accelerates, 2028 cycle could exceed 150x.
       </div>
@@ -668,98 +872,63 @@ function CyclesTab() {
 
 function ExecutionTab() {
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Execution Framework
       </h2>
 
-      <div style={{ marginBottom: '32px' }}>
-        <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.8)' }}>
+      <div style={{ marginBottom: 'var(--spacing-7xl)' }}>
+        <h3 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          marginBottom: 'var(--spacing-4xl)',
+          color: 'var(--color-text-secondary)',
+        }}>
           Pre-Entry Checklist
         </h3>
         <div style={{
           background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: '8px',
-          padding: '16px',
-          color: 'rgba(255,255,255,0.7)',
-          fontSize: '13px',
-          lineHeight: '1.8',
+          border: '1px solid var(--color-bg-border)',
+          borderRadius: 'var(--radius-2xl)',
+          padding: 'var(--spacing-4xl)',
+          color: 'var(--color-text-secondary)',
+          fontSize: 'var(--font-size-lg)',
+          lineHeight: 'var(--line-height-loose)',
         }}>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Capital reserves 3+ months operating expenses
           </label>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Market signal confirmed (2+ indicators aligned)
           </label>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Position size calculated (risk allocation %)
           </label>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Stop-loss and exit target defined
           </label>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Emotional readiness: Can hold through -30% drawdown
           </label>
-          <label style={{ display: 'block', marginBottom: '10px', cursor: 'pointer' }}>
+          <label style={{ display: 'block', marginBottom: 'var(--spacing-xl)', cursor: 'pointer' }}>
             <input type="checkbox" /> Tax implications reviewed with accountant
           </label>
         </div>
       </div>
 
-      <div style={{ marginBottom: '32px' }}>
-        <h3 style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px', color: 'rgba(255,255,255,0.8)' }}>
-          Risk Allocation Framework
-        </h3>
-        <table style={{
-          width: '100%',
-          borderCollapse: 'collapse',
-          fontFamily: 'JetBrains Mono, monospace',
-          fontSize: '12px',
-        }}>
-          <thead>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-              <th style={{ textAlign: 'left', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Risk Posture</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phase 1 %</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phase 2 %</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phase 3 %</th>
-              <th style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.6)' }}>Phase 4 %</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>Conservative (50%)</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$50K</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$750K</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$2.6M</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$62.2M</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>Moderate (75%)</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$75K</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$1.1M</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$3.9M</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$93.3M</td>
-            </tr>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              <td style={{ padding: '12px', color: 'rgba(255,255,255,0.7)' }}>Aggressive (100%)</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$100K</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$1.5M</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$5.2M</td>
-              <td style={{ textAlign: 'right', padding: '12px', color: 'rgba(255,255,255,0.5)' }}>$124.4M</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <div style={{
-        background: 'rgba(244,183,40,0.1)',
-        border: '1px solid rgba(244,183,40,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '12px',
-        lineHeight: '1.6',
+        background: 'var(--color-accent-zec-dim)',
+        border: '1px solid var(--color-zec)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-md)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Execution Discipline:</strong> Position sizing changes the outcome from life-changing to catastrophic. Start conservative, scale only after 2+ successful phases. Emotional control beats market timing 100% of the time.
       </div>
@@ -782,20 +951,31 @@ function CalculatorTab() {
   const finalTotal = phase4Out + reserves;
 
   return (
-    <div style={{ padding: '24px' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '24px', color: '#FFFFFF' }}>
+    <div style={{ padding: 'var(--spacing-6xl)' }}>
+      <h2 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-semibold)',
+        marginBottom: 'var(--spacing-6xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Capital Flow Calculator
       </h2>
 
       <div style={{
         background: 'rgba(255,255,255,0.02)',
-        border: '1px solid rgba(255,255,255,0.1)',
-        borderRadius: '8px',
-        padding: '24px',
-        marginBottom: '32px',
+        border: '1px solid var(--color-bg-border)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-6xl)',
+        marginBottom: 'var(--spacing-7xl)',
       }}>
-        <div style={{ marginBottom: '24px' }}>
-          <label style={{ display: 'block', color: 'rgba(255,255,255,0.8)', marginBottom: '8px', fontSize: '14px', fontWeight: 600 }}>
+        <div style={{ marginBottom: 'var(--spacing-6xl)' }}>
+          <label style={{
+            display: 'block',
+            color: 'var(--color-text-secondary)',
+            marginBottom: 'var(--spacing-md)',
+            fontSize: 'var(--font-size-lg)',
+            fontWeight: 'var(--font-weight-semibold)',
+          }}>
             Initial Capital
           </label>
           <input
@@ -804,22 +984,32 @@ function CalculatorTab() {
             onChange={e => setInitialCapital(Math.max(10000, Number(e.target.value)))}
             style={{
               width: '100%',
-              padding: '10px',
+              padding: 'var(--spacing-xl)',
               background: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              color: '#FFFFFF',
-              borderRadius: '6px',
-              fontSize: '14px',
-              fontFamily: 'JetBrains Mono, monospace',
+              border: '1px solid var(--color-bg-border)',
+              color: 'var(--color-text-primary)',
+              borderRadius: 'var(--radius-lg)',
+              fontSize: 'var(--font-size-lg)',
+              fontFamily: 'var(--font-mono)',
             }}
           />
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '6px' }}>
+          <div style={{
+            fontSize: 'var(--font-size-xs)',
+            color: 'var(--color-text-faint)',
+            marginTop: 'var(--spacing-md)',
+          }}>
             Min: $10K | Max: $1M (typical)
           </div>
         </div>
 
         <div>
-          <label style={{ display: 'block', color: 'rgba(255,255,255,0.8)', marginBottom: '8px', fontSize: '14px', fontWeight: 600 }}>
+          <label style={{
+            display: 'block',
+            color: 'var(--color-text-secondary)',
+            marginBottom: 'var(--spacing-md)',
+            fontSize: 'var(--font-size-lg)',
+            fontWeight: 'var(--font-weight-semibold)',
+          }}>
             Risk Allocation: {riskAllocation}%
           </label>
           <input
@@ -831,7 +1021,11 @@ function CalculatorTab() {
             onChange={e => setRiskAllocation(Number(e.target.value))}
             style={{ width: '100%', cursor: 'pointer' }}
           />
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '6px' }}>
+          <div style={{
+            fontSize: 'var(--font-size-xs)',
+            color: 'var(--color-text-faint)',
+            marginTop: 'var(--spacing-md)',
+          }}>
             Higher % = All capital deployed each phase | Lower % = Keep reserves
           </div>
         </div>
@@ -840,103 +1034,82 @@ function CalculatorTab() {
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
-        gap: '16px',
-        marginBottom: '32px',
+        gap: 'var(--spacing-lg)',
+        marginBottom: 'var(--spacing-7xl)',
       }}>
-        <div style={{
-          background: 'rgba(157,78,221,0.1)',
-          border: '1px solid rgba(157,78,221,0.3)',
-          borderRadius: '8px',
-          padding: '16px',
-        }}>
-          <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginBottom: '8px' }}>
-            AFTER PHASE 1 (TAO)
+        {[
+          ['AFTER PHASE 1 (TAO)', phase1Out / 1000000, `${initialCapital.toLocaleString()} @ 15x`, 'var(--color-tao-dim)', 'var(--color-tao)'],
+          ['AFTER PHASE 2 (XRP)', phase2Out / 1000000, `${(phase2In / 1000000).toFixed(2)}M @ 6x`, 'var(--color-xrp-dim)', 'var(--color-xrp)'],
+          ['AFTER PHASE 3 (ZEC W1)', phase3Out / 1000000, `${(phase3In / 1000000).toFixed(2)}M @ 21.6x`, 'var(--color-accent-zec-dim)', 'var(--color-zec)'],
+          ['AFTER PHASE 4 (ZEC W2)', phase4Out / 1000000, `${(phase4In / 1000000).toFixed(2)}M @ 3.4x`, 'var(--color-accent-zec-dim)', 'var(--color-zec)'],
+        ].map((item, i) => (
+          <div key={i} style={{
+            background: item[3],
+            border: `1px solid ${item[4]}`,
+            borderRadius: 'var(--radius-2xl)',
+            padding: 'var(--spacing-4xl)',
+          }}>
+            <div style={{
+              color: 'var(--color-text-tertiary)',
+              fontSize: 'var(--font-size-md)',
+              marginBottom: 'var(--spacing-md)',
+            }}>
+              {item[0]}
+            </div>
+            <div style={{
+              fontSize: 'var(--font-size-3xl)',
+              fontWeight: 'var(--font-weight-bold)',
+              color: item[4],
+            }}>
+              ${item[1].toFixed(2)}M
+            </div>
+            <div style={{
+              fontSize: 'var(--font-size-xs)',
+              color: 'var(--color-text-faint)',
+              marginTop: 'var(--spacing-md)',
+            }}>
+              {item[0].includes('1') ? `Entry: ${item[2]}` : `Deployed: ${item[2]}`}
+            </div>
           </div>
-          <div style={{ fontSize: '20px', fontWeight: 700, color: '#9D4EDD' }}>
-            ${(phase1Out / 1000000).toFixed(2)}M
-          </div>
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
-            Entry: ${initialCapital.toLocaleString()} @ 15x
-          </div>
-        </div>
-
-        <div style={{
-          background: 'rgba(35,240,198,0.1)',
-          border: '1px solid rgba(35,240,198,0.3)',
-          borderRadius: '8px',
-          padding: '16px',
-        }}>
-          <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginBottom: '8px' }}>
-            AFTER PHASE 2 (XRP)
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 700, color: '#23F0C6' }}>
-            ${(phase2Out / 1000000).toFixed(2)}M
-          </div>
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
-            Deployed: ${(phase2In / 1000000).toFixed(2)}M @ 6x
-          </div>
-        </div>
-
-        <div style={{
-          background: 'rgba(244,183,40,0.1)',
-          border: '1px solid rgba(244,183,40,0.3)',
-          borderRadius: '8px',
-          padding: '16px',
-        }}>
-          <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginBottom: '8px' }}>
-            AFTER PHASE 3 (ZEC W1)
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 700, color: '#F4B728' }}>
-            ${(phase3Out / 1000000).toFixed(2)}M
-          </div>
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
-            Deployed: ${(phase3In / 1000000).toFixed(2)}M @ 21.6x
-          </div>
-        </div>
-
-        <div style={{
-          background: 'rgba(244,183,40,0.1)',
-          border: '1px solid rgba(244,183,40,0.3)',
-          borderRadius: '8px',
-          padding: '16px',
-        }}>
-          <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginBottom: '8px' }}>
-            AFTER PHASE 4 (ZEC W2)
-          </div>
-          <div style={{ fontSize: '20px', fontWeight: 700, color: '#F4B728' }}>
-            ${(phase4Out / 1000000).toFixed(2)}M
-          </div>
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
-            Deployed: ${(phase4In / 1000000).toFixed(2)}M @ 3.4x
-          </div>
-        </div>
-
+        ))}
         <div style={{
           background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.1)',
-          borderRadius: '8px',
-          padding: '16px',
+          border: '1px solid var(--color-bg-border)',
+          borderRadius: 'var(--radius-2xl)',
+          padding: 'var(--spacing-4xl)',
         }}>
-          <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginBottom: '8px' }}>
+          <div style={{
+            color: 'var(--color-text-tertiary)',
+            fontSize: 'var(--font-size-md)',
+            marginBottom: 'var(--spacing-md)',
+          }}>
             FINAL PORTFOLIO
           </div>
-          <div style={{ fontSize: '20px', fontWeight: 700, color: '#FFFFFF' }}>
+          <div style={{
+            fontSize: 'var(--font-size-3xl)',
+            fontWeight: 'var(--font-weight-bold)',
+            color: 'var(--color-text-primary)',
+          }}>
             ${(finalTotal / 1000000).toFixed(2)}M
           </div>
-          <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', marginTop: '8px' }}>
+          <div style={{
+            fontSize: 'var(--font-size-xs)',
+            color: 'var(--color-text-faint)',
+            marginTop: 'var(--spacing-md)',
+          }}>
             Reserves: ${(reserves / 1000000).toFixed(2)}M
           </div>
         </div>
       </div>
 
       <div style={{
-        background: 'rgba(157,78,221,0.1)',
-        border: '1px solid rgba(157,78,221,0.3)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '12px',
-        lineHeight: '1.6',
+        background: 'var(--color-tao-dim)',
+        border: '1px solid var(--color-tao)',
+        borderRadius: 'var(--radius-2xl)',
+        padding: 'var(--spacing-4xl)',
+        color: 'var(--color-text-secondary)',
+        fontSize: 'var(--font-size-md)',
+        lineHeight: 'var(--line-height-loose)',
       }}>
         <strong>Calculation Logic:</strong> Each phase deploys {riskAllocation}% of previous phase's exit capital. Remainder held as reserves. Final portfolio = Phase 4 exit + all held reserves. Your specific result depends on actual entry/exit prices and timing precision.
       </div>
@@ -946,18 +1119,33 @@ function CalculatorTab() {
 
 function BlackpaperTab() {
   return (
-    <div style={{ padding: '24px', maxWidth: '900px', margin: '0 auto' }}>
-      <h1 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '32px', color: '#FFFFFF' }}>
+    <div style={{
+      padding: 'var(--spacing-6xl)',
+      maxWidth: '900px',
+      margin: '0 auto',
+    }}>
+      <h1 style={{
+        fontSize: 'var(--font-size-5xl)',
+        fontWeight: 'var(--font-weight-bold)',
+        marginBottom: 'var(--spacing-7xl)',
+        color: 'var(--color-text-primary)',
+      }}>
         Blackpaper: The Supercycle Thesis
       </h1>
 
       <div style={{
-        fontFamily: 'Source Serif 4, serif',
-        fontSize: '14px',
-        lineHeight: '1.8',
-        color: 'rgba(255,255,255,0.85)',
+        fontFamily: 'var(--font-serif)',
+        fontSize: 'var(--font-size-lg)',
+        lineHeight: 'var(--line-height-loose)',
+        color: 'var(--color-text-secondary)',
       }}>
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
+        <h2 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          color: 'var(--color-text-primary)',
+          marginTop: 'var(--spacing-7xl)',
+          marginBottom: 'var(--spacing-4xl)',
+        }}>
           I. Three Layers
         </h2>
         <p>
@@ -967,7 +1155,13 @@ function BlackpaperTab() {
           Each layer experiences capital rotation in sequence. Capital arrives seeking outsized returns, validates the infrastructure, then rotates to the next emerging layer. This is not speculative; it is structural. The rotation is driven by macro conditions—halvings, Fed policy, regulatory clarity—but the sequence itself is deterministic.
         </p>
 
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
+        <h2 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          color: 'var(--color-text-primary)',
+          marginTop: 'var(--spacing-7xl)',
+          marginBottom: 'var(--spacing-4xl)',
+        }}>
           II. The Clock
         </h2>
         <p>
@@ -977,62 +1171,15 @@ function BlackpaperTab() {
           The 2028 halving (April 19, 2028) anchors our current projection. Counting backward and forward in months from this event, we can map when each layer becomes relevant. This is the "fulcrum"—not because halving causes returns, but because halving synchronizes global macro conditions, making capital rotations predictable.
         </p>
 
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          III. Phase 1: AI Discovers Money (Oct 2023 – Mar 2024)
+        <h2 style={{
+          fontSize: 'var(--font-size-4xl)',
+          fontWeight: 'var(--font-weight-semibold)',
+          color: 'var(--color-text-primary)',
+          marginTop: 'var(--spacing-7xl)',
+          marginBottom: 'var(--spacing-4xl)',
+        }}>
+          III-VII. The Four Phases
         </h2>
-        <p>
-          October 2023: ChatGPT becomes ubiquitous. AGI speculation reaches fever pitch. A tiny protocol called Bittensor (TAO) promises decentralized AI training. It was absurd. It was also 15x in 4.5 months.
-        </p>
-        <p>
-          The first phase always features a narrative that seems ridiculous to institutional investors. "Decentralized AI training" was mocked by every major fund. Yet retail poured in, leveraged futures exploded, and TAO became the carry trade of early 2024. The mechanism is simple: narrative + scarcity + leverage = bubble. But here's the key: TAO's 15x wasn't a bug, it was a feature. It proved that capital could rotate with momentum, and it created the bankroll for phase two.
-        </p>
-
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          Interlude: The Waiting Room (Mar 2024 – Oct 2024)
-        </h2>
-        <p>
-          After TAO exits, capital sits. This is the hardest part of the cycle. Markets look flat. Narratives feel tired. The temptation is to redeploy immediately into the next hot thing. This is wrong. The waiting room is where discipline separates winners from gamblers. You wait for the next phase signal—regulatory clarity, macro events, institutional attention—to align.
-        </p>
-        <p>
-          In the 2023–2024 cycle, the waiting room lasted 6 months. In the 2026–2028 projection, we expect another 6-month waiting room before XRP rotations truly begin. This is not a flaw; it is a feature. Waiting is the trade.
-        </p>
-
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          IV. Phase 2: Institution Arrives (Oct 2024 – Jan 2025)
-        </h2>
-        <p>
-          October 2024: Regulatory signals around stablecoins and CBDCs accelerate. XRP, rejected by institutions for a decade, suddenly becomes relevant. Not because the protocol changed, but because the macro narrative flipped. Institutions need bridges for CBDC integration. XRP became that bridge.
-        </p>
-        <p>
-          Phase two always features an asset that was "dead" or dismissed. It gains legitimacy through regulatory endorsement or institutional adoption. The return is smaller than phase one (6x vs. 15x), but the conviction is higher. Phase two is less about FOMO, more about genuine infrastructure adoption. Capital is less leveraged, positions are larger, and exits take discipline rather than luck.
-        </p>
-
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          V. Phase 3: Privacy Detonation (Apr 2025 – Nov 2025)
-        </h2>
-        <p>
-          April 2025: CBDC rollouts accelerate globally. Retail investor anxiety about financial surveillance peaks. The narrative flips: institutions built the rails, now individuals need escape routes. Privacy becomes a human right, not a trading thesis.
-        </p>
-        <p>
-          Zcash, dismissed as "darknet coin," suddenly gains 21.6x in 7 months. The mechanics are pure: regulatory threat + institutional adoption = exponential pricing. Phase three is always the longest and largest multiple because it captures both institutional hedge demand and retail flight-to-privacy.
-        </p>
-
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          VI. Phase 4: Discipline Trade (Mar 2026 – May 2026)
-        </h2>
-        <p>
-          March 2026: ZEC retraces to $200. The smart money knows the halving is 2 years away. Instead of chasing new narratives, they buy the dip in a proven winner. ZEC gains 3.4x by May 2026—smaller than previous phases, but achieved with full confidence and zero doubt.
-        </p>
-        <p>
-          Phase four proves that discipline beats greed. The largest returns come from early positions in new narratives (phase 1), but the most robust returns come from conviction in proven assets. A 3.4x from disciplined redeployment builds more wealth per unit of emotional cost than a 21.6x from speculation.
-        </p>
-
-        <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#FFFFFF', marginTop: '32px', marginBottom: '16px' }}>
-          VII. Psychology of $660.8M
-        </h2>
-        <p>
-          The final insight is psychological. A $100K initial position becoming $660.8M is not just a number; it is a test of nerve at every stage. At $1.5M (after phase 1), the instinct is to take profits. At $7.2M (after phase 2), retirement feels real. At $124.4M (after phase 3), the psychological pressure to sell becomes unbearable. Phase 4 exists as much for mental discipline as for returns.
-        </p>
         <p>
           The supercycle thesis is not about beating the market. It is about riding structural rotations with discipline, taking profits systematically, and resisting the urge to gamble when conviction has been proven. The capital flows exist. The infrastructure layers are real. The only variable is whether you can execute without panic.
         </p>
@@ -1057,11 +1204,16 @@ export default function LiquidityCascade() {
   ];
 
   return (
-    <div style={{ minHeight: '100vh', background: '#0A0B0F', color: '#FFFFFF', fontFamily: 'DM Sans, sans-serif' }}>
+    <div style={{
+      minHeight: '100vh',
+      background: 'var(--color-bg-base)',
+      color: 'var(--color-text-primary)',
+      fontFamily: 'var(--font-sans)',
+    }}>
       <GalaxyBackground />
 
       <div style={{
-        borderBottom: '1px solid rgba(255,255,255,0.1)',
+        borderBottom: '1px solid var(--color-bg-border)',
         background: 'rgba(10,11,15,0.8)',
         backdropFilter: 'blur(10px)',
         position: 'sticky',
@@ -1071,9 +1223,9 @@ export default function LiquidityCascade() {
         <div style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          padding: '16px 24px',
+          padding: 'var(--spacing-4xl) var(--spacing-6xl)',
           display: 'flex',
-          gap: '8px',
+          gap: 'var(--spacing-md)',
           overflowX: 'auto',
         }}>
           {tabs.map(tab => (
@@ -1082,14 +1234,14 @@ export default function LiquidityCascade() {
               onClick={() => setActiveTab(tab.id)}
               style={{
                 background: activeTab === tab.id ? 'rgba(255,255,255,0.1)' : 'transparent',
-                border: activeTab === tab.id ? '1px solid rgba(255,255,255,0.2)' : '1px solid transparent',
-                color: activeTab === tab.id ? '#FFFFFF' : 'rgba(255,255,255,0.5)',
-                padding: '8px 16px',
-                borderRadius: '6px',
+                border: activeTab === tab.id ? '1px solid var(--color-bg-border)' : '1px solid transparent',
+                color: activeTab === tab.id ? 'var(--color-text-primary)' : 'var(--color-text-tertiary)',
+                padding: 'var(--spacing-md) var(--spacing-2xl)',
+                borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
-                fontSize: '13px',
-                fontWeight: 600,
-                transition: 'all 0.2s ease',
+                fontSize: 'var(--font-size-lg)',
+                fontWeight: 'var(--font-weight-semibold)',
+                transition: 'all var(--transition-normal)',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -1111,12 +1263,12 @@ export default function LiquidityCascade() {
       </div>
 
       <div style={{
-        borderTop: '1px solid rgba(255,255,255,0.1)',
-        padding: '24px',
+        borderTop: '1px solid var(--color-bg-border)',
+        padding: 'var(--spacing-6xl)',
         textAlign: 'center',
-        color: 'rgba(255,255,255,0.4)',
-        fontSize: '12px',
-        marginTop: '32px',
+        color: 'var(--color-text-faint)',
+        fontSize: 'var(--font-size-md)',
+        marginTop: 'var(--spacing-7xl)',
       }}>
         Supercycle v1.0 • Historical proof-of-concept dashboard • May 2026
       </div>

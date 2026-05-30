@@ -1,0 +1,108 @@
+:root {
+  /* Background Colors */
+  --color-bg-base: #0A0B0F;
+  --color-bg-surface: rgba(255, 255, 255, 0.02);
+  --color-bg-surface-hover: rgba(255, 255, 255, 0.03);
+  --color-bg-border: rgba(255, 255, 255, 0.06);
+  --color-bg-border-subtle: rgba(255, 255, 255, 0.03);
+
+  /* Text Colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  --color-text-muted: rgba(255, 255, 255, 0.35);
+  --color-text-faint: rgba(255, 255, 255, 0.2);
+
+  /* Accent Colors */
+  --color-accent-sol: #00FFA3;
+  --color-accent-mstr: #FF6B35;
+  --color-accent-zec: #F4B728;
+  --color-accent-alt: #6450FF;
+  --color-accent-sol-dim: rgba(0, 255, 163, 0.12);
+  --color-accent-mstr-dim: rgba(255, 107, 53, 0.12);
+  --color-accent-zec-dim: rgba(244, 183, 40, 0.12);
+  --color-accent-alt-dim: rgba(100, 80, 255, 0.12);
+
+  /* Legacy Colors */
+  --color-tao: #9D4EDD;
+  --color-tao-dim: rgba(157, 78, 221, 0.12);
+  --color-xrp: #23F0C6;
+  --color-xrp-dim: rgba(35, 240, 198, 0.12);
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-serif: 'Source Serif 4', serif;
+
+  --font-size-xs: 8px;
+  --font-size-sm: 9px;
+  --font-size-base: 11px;
+  --font-size-md: 12px;
+  --font-size-lg: 13px;
+  --font-size-xl: 14px;
+  --font-size-2xl: 18px;
+  --font-size-3xl: 20px;
+  --font-size-4xl: 22px;
+  --font-size-5xl: 28px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 1px;
+  --letter-spacing-wider: 1.2px;
+  --letter-spacing-widest: 1.5px;
+  --letter-spacing-mono: 2px;
+
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.55;
+  --line-height-loose: 1.65;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 6px;
+  --spacing-md: 8px;
+  --spacing-lg: 10px;
+  --spacing-xl: 12px;
+  --spacing-2xl: 14px;
+  --spacing-3xl: 18px;
+  --spacing-4xl: 20px;
+  --spacing-5xl: 22px;
+  --spacing-6xl: 24px;
+  --spacing-7xl: 30px;
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-2xl: 10px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: var(--line-height-normal);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
