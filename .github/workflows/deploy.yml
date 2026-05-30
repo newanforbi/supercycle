@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - master
-      - claude/supercycle-build-deploy-M1Zu1
+      - claude/supercycle-design-tokens
 
 permissions:
   contents: read
