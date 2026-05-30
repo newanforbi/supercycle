@@ -1,0 +1,98 @@
+{
+  "colors": {
+    "background": {
+      "base": "#0A0B0F",
+      "surface": "rgba(255,255,255,0.02)",
+      "surfaceHover": "rgba(255,255,255,0.03)",
+      "border": "rgba(255,255,255,0.06)",
+      "borderSubtle": "rgba(255,255,255,0.03)"
+    },
+    "text": {
+      "primary": "#ffffff",
+      "secondary": "rgba(255,255,255,0.7)",
+      "tertiary": "rgba(255,255,255,0.5)",
+      "muted": "rgba(255,255,255,0.35)",
+      "faint": "rgba(255,255,255,0.2)"
+    },
+    "accent": {
+      "sol": "#00FFA3",
+      "mstr": "#FF6B35",
+      "zec": "#F4B728",
+      "alt": "#6450FF",
+      "solDim": "rgba(0,255,163,0.12)",
+      "mstrDim": "rgba(255,107,53,0.12)",
+      "zecDim": "rgba(244,183,40,0.12)",
+      "altDim": "rgba(100,80,255,0.12)"
+    },
+    "legacy": {
+      "tao": "#9D4EDD",
+      "taoDim": "rgba(157,78,221,0.12)",
+      "xrp": "#23F0C6",
+      "xrpDim": "rgba(35,240,198,0.12)"
+    }
+  },
+  "typography": {
+    "fontFamilies": {
+      "mono": "'JetBrains Mono', monospace",
+      "sans": "'DM Sans', sans-serif",
+      "display": "'Space Grotesk', sans-serif",
+      "serif": "'Source Serif 4', serif"
+    },
+    "fontSizes": {
+      "xs": "8px",
+      "sm": "9px",
+      "base": "11px",
+      "md": "12px",
+      "lg": "13px",
+      "xl": "14px",
+      "2xl": "18px",
+      "3xl": "20px",
+      "4xl": "22px",
+      "5xl": "28px"
+    },
+    "fontWeights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "letterSpacing": {
+      "normal": "0",
+      "wide": "1px",
+      "wider": "1.2px",
+      "widest": "1.5px",
+      "mono": "2px"
+    },
+    "lineHeight": {
+      "tight": "1.1",
+      "normal": "1.5",
+      "relaxed": "1.55",
+      "loose": "1.65"
+    }
+  },
+  "spacing": {
+    "xs": "4px",
+    "sm": "6px",
+    "md": "8px",
+    "lg": "10px",
+    "xl": "12px",
+    "2xl": "14px",
+    "3xl": "18px",
+    "4xl": "20px",
+    "5xl": "22px",
+    "6xl": "24px",
+    "7xl": "30px"
+  },
+  "borderRadius": {
+    "sm": "3px",
+    "md": "4px",
+    "lg": "6px",
+    "xl": "8px",
+    "2xl": "10px"
+  },
+  "transitions": {
+    "fast": "0.2s ease",
+    "normal": "0.3s ease",
+    "slow": "0.5s ease"
+  }
+}
