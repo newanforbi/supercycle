@@ -1204,13 +1204,13 @@ function CalculatorSection() {
   const [initial, setInitial] = useState(100000);
   const [riskSplit, setRiskSplit] = useState(100);
 
-  const phase1Out = initial * 19.66;
+  const phase1Out = initial * 15.0;
   const phase2In = phase1Out * (riskSplit / 100);
   const phase2Reserve = phase1Out - phase2In;
-  const phase2Out = phase2In * 3.51;
+  const phase2Out = phase2In * 6.0;
   const phase3In = phase2Out * (riskSplit / 100);
   const phase3Reserve = phase2Out - phase3In + phase2Reserve;
-  const phase3Out = phase3In * 33.7;
+  const phase3Out = phase3In * 33.67;
   const phase4In = phase3Out * (riskSplit / 100);
   const phase4Reserve = phase3Out - phase4In + phase3Reserve;
   const phase4Out = phase4In * 3.4;
